@@ -1,6 +1,7 @@
-using Monitoring.Models.Meters;
+using HouseSystem.Dto;
 using Monitoring;
 using Microsoft.AspNetCore.Mvc;
+using Monitoring.Models.Meters;
 
 namespace HouseSystem.Controllers
 {
@@ -14,13 +15,25 @@ namespace HouseSystem.Controllers
             _monitor = monitor;
         }
 
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var meter = _monitor.GetMeter(id);
+            if (meter != null)
+            {
+                return Ok(meter);
+            }
+
+            return NotFound();
+        }
+        
         [HttpPost]
-        public IActionResult Create([FromBody]WaterMeter waterMeter)
+        public IActionResult Create([FromBody]WaterMeterDto waterMeter)
         {
             if (ModelState.IsValid)
             {
-                _monitor.AddMeter(waterMeter);
-                return Ok();
+                _monitor.AddMeter((WaterMeter)waterMeter);
+                return CreatedAtAction(nameof(Get), new { id = waterMeter.Id }, (WaterMeter)waterMeter);
             }
 
             return BadRequest();

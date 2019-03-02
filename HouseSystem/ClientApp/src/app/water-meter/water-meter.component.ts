@@ -10,6 +10,7 @@ import {WaterMeterService} from "./water-meter.service";
 export class WaterMeterComponent implements OnInit {
   @Input() houseId: number;
   @Output() onCancel = new EventEmitter();
+  @Output() onCreate = new EventEmitter<WaterMeter>();
   waterMeter: WaterMeter = new WaterMeter();
 
   error: string;
@@ -20,11 +21,10 @@ export class WaterMeterComponent implements OnInit {
   }
 
   registerWaterMeter(waterMeter: WaterMeter){
-    debugger;
-    waterMeter.building.id = this.houseId;
+    waterMeter.buildingId = this.houseId;
     this.waterMeterService.addWaterMeter(waterMeter)
       .then(response => {
-        debugger;
+        this.onCreate.emit(waterMeter);
       })
       .catch(error => {
         this.error = error;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HouseService} from "../house.service";
 import {House} from "../house.models";
+import {WaterMeter} from "../../water-meter/water-meter.models";
 
 @Component({
   selector: 'app-house-list',
@@ -12,20 +13,34 @@ export class HouseListComponent implements OnInit {
 
   houses: Array<House>;
   editHouse: House = new House();
+  houseWithMaxWaterValue: House = new House();
+  idHouseMaxWater: number = -1;
   error: string;
 
   constructor(private houseService: HouseService) { }
 
   ngOnInit() {
     this.getHouses();
+    this.getHouseWithMaxWater();
   }
 
   startEditHouse(house: House){
     this.editHouse = house;
   }
 
-  onCancel(){
+  cancelEdit(){
     this.editHouse = new House();
+  }
+
+  addWaterMeter(waterMeter: WaterMeter){
+    let house = this.houses.find(h => h.id == waterMeter.buildingId);
+    house.waterMeters = [waterMeter];
+    this.editHouse = new House();
+    this.getHouseWithMaxWater();
+  }
+
+  addHouse(house: House){
+    this.houses.push(house);
   }
 
   getHouses(){
@@ -36,6 +51,16 @@ export class HouseListComponent implements OnInit {
       .catch(error => {
         this.error = error;
       });
+  }
+
+  getHouseWithMaxWater(){
+    this.houseService.getHouseWithMaxWater()
+      .then(house => {
+        this.houseWithMaxWaterValue = house;
+      })
+      .catch(error => {
+        this.error = error;
+      })
   }
 
 }

@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Threading.Tasks;
+using HouseSystem.Parameters;
 using Monitoring;
 using Microsoft.AspNetCore.Mvc;
 using Monitoring.Models.Buildings;
@@ -16,13 +17,49 @@ namespace HouseSystem.Controllers
         {
             _monitor = monitor;
         }
-
+        
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync(Filter filter)
         {
-            return Ok(await _monitor.GetAllBuildingsAsync(b => b.WaterMeters));
+            if (ModelState.IsValid)
+            {
+                if (filter.IsEmpty())
+                {
+                    return Ok(await _monitor.GetAllBuildingsAsync(b => b.WaterMeters));
+                    
+                }
+                return await FilterBuildingsAsync(filter);
+            }
+
+            return BadRequest(ModelState);
         }
 
+        /// <summary>
+        /// Фильтрация домов по параметрам
+        /// </summary>
+        /// <param name="filter">Параметры фильтрации</param>
+        /// <returns></returns>
+        private async Task<IActionResult> FilterBuildingsAsync(Filter filter)
+        {
+            if (!string.IsNullOrEmpty(filter.Max))
+            {
+                switch (filter.Max.ToLower())
+                {
+                    case "water":
+                        return Ok(await _monitor.GetBuildingWithMaxWaterConsumptionAsync());
+                    default:
+                        ModelState.AddModelError(filter.Max, "Неопределенное знание");
+                        break;
+                }
+            }
+            else
+            {
+                ModelState.AddModelError(filter.Max, "Неподдерживаемый атрибут фильтрации");
+            }
+            
+            return BadRequest(ModelState);
+        }
+        
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -35,18 +72,6 @@ namespace HouseSystem.Controllers
             return NotFound();
         }
 
-        [HttpGet("api/[controller]/max/water")]
-        public async Task<IActionResult> GetWithMaxWaterAsync()
-        {
-            var house = await _monitor.GetBuildingWithMaxWaterConsumptionAsync();
-            if (house != null)
-            {
-                return Ok(house);
-            }
-
-            return NotFound();
-        }
-    
         [HttpPost]
         public IActionResult Create([FromBody] House house)
         {

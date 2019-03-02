@@ -2,6 +2,9 @@
   <h5 class="h5">Список домов</h5>
   <div class="row">
     <table class='table table-striped' *ngIf="houses">
+      <caption>
+        <div class="alert alert-warning">Дом с максимальным потреблением воды</div>
+      </caption>
       <thead>
       <tr>
         <th>ИД</th>
@@ -11,17 +14,19 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let house of houses" >
+      <tr *ngFor="let house of houses" [ngClass]="{'table-warning':house.id == houseWithMaxWaterValue.id}">
         <td>{{ house.id }}</td>
         <td>{{ house.address }}</td>
-        <td *ngIf="house.waterMeters.length > 0"> {{house.waterMeters[0].value}}</td>
-        <td *ngIf="house.waterMeters.length == 0"> Нет данных </td>
+        <td *ngIf="house.waterMeters && house.waterMeters.length > 0"> {{house.waterMeters[0].value}}</td>
+        <td *ngIf="!house.waterMeters || house.waterMeters.length == 0"> Нет данных </td>
         <td>
-          <app-water-meter *ngIf="editHouse.id == house.id" [houseId]="editHouse.id" (onCancel)="onCancel()"></app-water-meter>
+          <app-water-meter *ngIf="editHouse.id == house.id" [houseId]="editHouse.id" (onCancel)="cancelEdit()" (onCreate)="addWaterMeter($event)"></app-water-meter>
           <button *ngIf="editHouse.id != house.id" class="btn btn-sm btn-primary" (click)="startEditHouse(house)">Зарегистрировать новый счетчик воды</button>
         </td>
       </tr>
       </tbody>
     </table>
   </div>
+  <h5 class="h5">Добавление нового дома</h5>
+  <app-house-detail (onAdd)="addHouse($event)" ></app-house-detail>
 </div>

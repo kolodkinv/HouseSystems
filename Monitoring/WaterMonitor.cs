@@ -26,9 +26,22 @@ namespace Monitoring
         /// <returns>Строение с максимальным показателем потребления воды</returns>
         public async Task<Building> GetBuildingWithMaxWaterConsumptionAsync()
         {
+            // Находим водяной счетчик с макс. потреблением воды
             var waterMeters = await _db.WaterMeters.GetAllAsync();
-            var waterMeterMax = waterMeters.OrderByDescending(m => m.Value).FirstOrDefault();
-            return waterMeterMax?.Building;
+            var waterMeterMax = waterMeters
+                .OrderByDescending(m => m.Value)
+                .FirstOrDefault();
+            
+            if (waterMeterMax != null)
+            {
+                // Собираем информацию о строении в котором устновлен счетчик
+                var fullWaterMeterMax = _db.WaterMeters
+                    .GetWithInclude(m => m.Id == waterMeterMax.Id, wm => wm.Building)
+                    .FirstOrDefault();
+                return fullWaterMeterMax?.Building;
+            }
+
+            return null;
         }
 
         public async Task<IEnumerable<Building>> GetAllBuildingsAsync()
@@ -36,7 +49,8 @@ namespace Monitoring
             return await _db.Buildings.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Building>> GetAllBuildingsAsync(params Expression<Func<Building, object>>[] includeProperties)
+        public async Task<IEnumerable<Building>> GetAllBuildingsAsync(
+            params Expression<Func<Building, object>>[] includeProperties)
         {
             return await _db.Buildings.GetWithIncludeAsync(includeProperties);
         }
@@ -44,6 +58,11 @@ namespace Monitoring
         public Building GetBuilding(int id)
         {
             return _db.Buildings.Get(id);
+        }
+
+        public Meter GetMeter(int id)
+        {
+            return _db.Meters.Get(id);
         }
 
         public void AddBuilding(Building building)

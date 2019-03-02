@@ -4,6 +4,7 @@ export class WaterMeter {
   id: string;
   value: number;
   building: House;
+  buildingId:number;
 
   constructor(){
     this.id = "";

@@ -26,6 +26,8 @@ namespace Monitoring
         /// <returns></returns>
         Building GetBuilding(int id);
 
+        Meter GetMeter(int id);
+
         /// <summary>
         /// Добавить строение к мониторингу
         /// </summary>

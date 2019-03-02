@@ -1,3 +1,8 @@
-<p>
-  house works!
-</p>
+<div class="row">
+  <div class="col">
+    <input type="text" [(ngModel)]="newHouse.address" class="form-control" placeholder="Адрес"/>
+  </div>
+  <div class="col">
+    <button class="btn btn-outline-success btn-block" (click)="addHouse(newHouse)">Зарегистрировать</button>
+  </div>
+</div>

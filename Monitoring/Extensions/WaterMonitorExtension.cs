@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Monitoring.Repositories;
 using Monitoring.Repositories.EF;
 
-namespace HomeSystems.Monitoring.Extensions
+namespace Monitoring.Extensions
 {
     public static class WaterMonitorExtension
     {

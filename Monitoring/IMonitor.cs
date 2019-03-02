@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Monitoring.Models.Buildings;
 using Monitoring.Models.Meters;
 
-namespace HomeSystems.Monitoring
+namespace Monitoring
 {
     public interface IMonitor
     {  
@@ -11,13 +13,11 @@ namespace HomeSystems.Monitoring
         /// Получить строение с максимальный потреблением
         /// </summary>
         /// <returns></returns>
-        Task<Building> GetBuildingWithMaxWaterConsumption();
+        Task<Building> GetBuildingWithMaxWaterConsumptionAsync();
 
-        /// <summary>
-        /// Получение списка всех строений
-        /// </summary>
-        /// <returns></returns>
-        Task<ICollection<Building>> GetAllBuildings();
+
+        Task<IEnumerable<Building>> GetAllBuildingsAsync();
+        Task<IEnumerable<Building>> GetAllBuildingsAsync(params Expression<Func<Building, object>>[] includeProperties);
 
         /// <summary>
         /// Получить строение

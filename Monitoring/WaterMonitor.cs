@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Monitoring.Exceptions;
 using Monitoring.Models.Buildings;
@@ -7,7 +9,7 @@ using Monitoring.Models.Meters;
 using Monitoring.Repositories;
 
 
-namespace HomeSystems.Monitoring
+namespace Monitoring
 {
     public class WaterMonitor : IMonitor
     {
@@ -22,16 +24,21 @@ namespace HomeSystems.Monitoring
         /// Получить строение с максимальным показателем потребления воды
         /// </summary>
         /// <returns>Строение с максимальным показателем потребления воды</returns>
-        public async Task<Building> GetBuildingWithMaxWaterConsumption()
+        public async Task<Building> GetBuildingWithMaxWaterConsumptionAsync()
         {
-            var waterMeters = await _db.WaterMeters.GetAll();
+            var waterMeters = await _db.WaterMeters.GetAllAsync();
             var waterMeterMax = waterMeters.OrderByDescending(m => m.Value).FirstOrDefault();
             return waterMeterMax?.Building;
         }
 
-        public async Task<ICollection<Building>> GetAllBuildings()
+        public async Task<IEnumerable<Building>> GetAllBuildingsAsync()
         {
-            return (ICollection<Building>) await _db.Buildings.GetAll();
+            return await _db.Buildings.GetAllAsync();
+        }
+
+        public async Task<IEnumerable<Building>> GetAllBuildingsAsync(params Expression<Func<Building, object>>[] includeProperties)
+        {
+            return await _db.Buildings.GetWithIncludeAsync(includeProperties);
         }
 
         public Building GetBuilding(int id)
@@ -54,14 +61,10 @@ namespace HomeSystems.Monitoring
             
             if (meter is WaterMeter waterMeter)
             {
-                if (building.WaterMeters.Count != 0)
-                {
-                    // Очистка счетчиков воды т.к в текущей реализации возможен один счетчик для воды
-                    building.WaterMeters = new List<WaterMeter>();
-                }
-                building.WaterMeters.Add(waterMeter);    
-            }
-            _db.Save();
+                // Очистка счетчиков воды т.к в текущей реализации возможен один счетчик для воды
+                building.WaterMeters = new List<WaterMeter> {waterMeter};
+                _db.Save();
+            }   
         }
     }
 }

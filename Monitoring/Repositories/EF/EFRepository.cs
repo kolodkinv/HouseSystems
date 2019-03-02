@@ -22,7 +22,7 @@ namespace Monitoring.Repositories.EF
             _dbSet = context.Set<TEntity>();
         }
          
-        public async Task<IEnumerable<TEntity>> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _dbSet.AsNoTracking().ToListAsync();
         }
@@ -32,14 +32,17 @@ namespace Monitoring.Repositories.EF
             return _dbSet.Find(id);
         }
 
-        public async Task<TEntity> Get(Expression<Func<TEntity, bool>> predicate)
+        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate)
         {
             return await _dbSet.FirstOrDefaultAsync(predicate);
         }
 
         public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate)
         {
-            return _dbSet.AsNoTracking().Where(predicate).ToList();
+            return _dbSet.AsNoTracking()
+                .AsEnumerable()
+                .Where(predicate)
+                .ToList();
         }
 
         public void Create(TEntity item)
@@ -65,16 +68,18 @@ namespace Monitoring.Repositories.EF
             _context.SaveChanges();
         }
 
-        public IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties)
+        public async Task<IEnumerable<TEntity>> GetWithIncludeAsync(params Expression<Func<TEntity, object>>[] includeProperties)
         {
-            return Include(includeProperties).ToList();
+            return await Include(includeProperties).ToListAsync();
         }
  
         public IEnumerable<TEntity> GetWithInclude(Func<TEntity,bool> predicate, 
             params Expression<Func<TEntity, object>>[] includeProperties)
         {
             var query =  Include(includeProperties);
-            return query.Where(predicate).ToList();
+            return query.AsEnumerable()
+                .Where(predicate)
+                .ToList();
         }
  
         private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)

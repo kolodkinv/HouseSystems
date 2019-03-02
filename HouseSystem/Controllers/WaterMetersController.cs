@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HouseSystem.Controllers
 {
+    [Route("api/[controller]")]
     public class WaterMetersController : Controller
     {
         private IMonitor _monitor;
@@ -13,11 +14,13 @@ namespace HouseSystem.Controllers
             _monitor = monitor;
         }
 
-        public IActionResult Create(WaterMeter waterMeter)
+        [HttpPost]
+        public IActionResult Create([FromBody]WaterMeter waterMeter)
         {
             if (ModelState.IsValid)
             {
                 _monitor.AddMeter(waterMeter);
+                return Ok();
             }
 
             return BadRequest();

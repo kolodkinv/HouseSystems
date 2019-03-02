@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b8ced03-1f45-41b9-8c12-8e1ccf553e38" name="Default Changelist" comment="" />
+    <list default="true" id="6b8ced03-1f45-41b9-8c12-8e1ccf553e38" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail/house-detail.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.models.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.models.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/counter/counter.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/counter/counter.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/counter/counter.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/fetch-data/fetch-data.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/fetch-data/fetch-data.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/Controllers/SampleDataController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/HouseSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/HouseSystem.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HouseSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/IMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/IMonitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Monitoring.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Monitoring.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Monitoring/IMonitor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Monitoring/WaterMonitor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,100 +44,161 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HouseSystem/Startup.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-              <folding>
-                <marker date="1551526049586" expanded="true" signature="6:350" ph="..." />
-                <marker date="1551526049586" expanded="true" signature="373:2578" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="400:2576" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="459:522" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="745:1281" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="1469:2570" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="1516:1593" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="1610:1864" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="1970:2136" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="2169:2558" ph="{...}" />
-                <marker date="1551526049586" expanded="true" signature="2200:2346" ph="/* To learn more about options for serving an Angular SPA from ASP.NET Core, ... */" />
-                <marker date="1551526049586" expanded="true" signature="2443:2544" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/SampleDataController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="21" />
-              <folding>
-                <marker date="1551526050730" expanded="false" signature="6:189" ph="..." />
-                <marker date="1551526050730" expanded="true" signature="224:1493" ph="{...}" />
-                <marker date="1551526050730" expanded="true" signature="309:1491" ph="{...}" />
-                <marker date="1551526050730" expanded="true" signature="413:465" ph="{...}" />
-                <marker date="1551526050730" expanded="true" signature="533:655" ph="{...}" />
-                <marker date="1551526050730" expanded="true" signature="750:1143" ph="{...}" />
-                <marker date="1551526050730" expanded="true" signature="927:1131" ph="{...}" />
-                <marker date="1551526050730" expanded="true" signature="1181:1485" ph="{...}" />
-                <marker date="1551526050730" expanded="true" signature="1380:1475" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding>
+                <marker date="1551548511278" expanded="true" signature="6:156" ph="..." />
+                <marker date="1551548511278" expanded="true" signature="191:1566" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="271:1564" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="380:432" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="506:606" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="674:869" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="765:827" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="982:1209" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="1105:1167" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="1293:1549" ph="{...}" />
+                <marker date="1551548511278" expanded="true" signature="1339:1495" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <marker date="1551547932840" expanded="false" signature="6:338" ph="..." />
+                <marker date="1551547932840" expanded="true" signature="361:2878" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="388:2876" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="447:510" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="733:1581" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="744:987" ph="/* services.AddDbContext&lt;MonitoringContextEF&gt;( ... */" />
+                <marker date="1551547932840" expanded="true" signature="1769:2870" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="1816:1893" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="1910:2164" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="2270:2436" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="2469:2858" ph="{...}" />
+                <marker date="1551547932840" expanded="true" signature="2500:2646" ph="/* To learn more about options for serving an Angular SPA from ASP.NET Core, ... */" />
+                <marker date="1551547932840" expanded="true" signature="2743:2844" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+              <folding>
+                <marker date="1551547916092" expanded="true" signature="6:107" ph="..." />
+                <marker date="1551547916092" expanded="true" signature="143:862" ph="{...}" />
+                <marker date="1551547916092" expanded="true" signature="196:860" ph="{...}" />
+                <marker date="1551547916092" expanded="true" signature="364:715" ph="{...}" />
+                <marker date="1551547916092" expanded="true" signature="417:705" ph="{...}" />
+                <marker date="1551547916092" expanded="true" signature="463:535" ph="{...}" />
+                <marker date="1551547916092" expanded="true" signature="556:691" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.models.ts">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Monitoring/IMonitor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
               <folding>
-                <marker date="1551526050738" expanded="false" signature="6:114" ph="..." />
-                <marker date="1551526050738" expanded="true" signature="149:1486" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="229:1484" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="338:390" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="459:536" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="604:799" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="695:757" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="907:1129" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="1025:1087" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="1213:1469" ph="{...}" />
-                <marker date="1551526050738" expanded="true" signature="1259:1415" ph="{...}" />
+                <marker date="1551548522366" expanded="true" signature="6:175" ph="..." />
+                <marker date="1551548522366" expanded="true" signature="197:1307" ph="{...}" />
+                <marker date="1551548522366" expanded="true" signature="229:1305" ph="{...}" />
+                <marker date="1551548522366" expanded="true" signature="246:372" ph="/// Получить строение с максимальный потреблением ... " />
+                <marker date="1551548522366" expanded="true" signature="631:767" ph="/// Получить строение ... " />
+                <marker date="1551548522366" expanded="true" signature="815:947" ph="/// Добавить строение к мониторингу ... " />
+                <marker date="1551548522366" expanded="true" signature="1002:1263" ph="/// Зарегистрировать новый измерительный прибор в строение ... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HouseSystem/Contexts/MonitoringContextEF.cs">
+        <entry file="file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+            <state relative-caret-position="540">
+              <caret line="38" column="56" lean-forward="true" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
               <folding>
-                <marker date="1551526031794" expanded="true" signature="6:103" ph="..." />
-                <marker date="1551526031794" expanded="true" signature="135:797" ph="{...}" />
-                <marker date="1551526031794" expanded="true" signature="186:795" ph="{...}" />
-                <marker date="1551526031794" expanded="true" signature="302:360" ph="{...}" />
-                <marker date="1551526031794" expanded="true" signature="439:569" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="6:254" ph="..." />
+                <marker date="1551548522358" expanded="true" signature="277:2131" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="320:2129" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="412:454" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="472:666" ph="/// Получить строение с максимальным показателем потребления воды ... " />
+                <marker date="1551548522358" expanded="true" signature="744:969" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="1042:1116" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="1250:1349" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="1394:1456" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="1508:1572" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="1615:2123" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="1724:1821" ph="{...}" />
+                <marker date="1551548522358" expanded="true" signature="1882:2110" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A020BCAD-AE13-4113-A6A4-2D64AD3E00CA/75/b5067945/Expression.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="344">
+              <caret line="4122" lean-forward="true" selection-start-line="4122" selection-end-line="4122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
-                <marker date="1551526050722" expanded="true" signature="6:81" ph="..." />
-                <marker date="1551526050722" expanded="true" signature="116:552" ph="{...}" />
-                <marker date="1551526050722" expanded="true" signature="170:550" ph="{...}" />
-                <marker date="1551526050722" expanded="true" signature="267:319" ph="{...}" />
-                <marker date="1551526050722" expanded="true" signature="379:544" ph="{...}" />
-                <marker date="1551526050722" expanded="true" signature="425:500" ph="{...}" />
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding>
+                <marker date="1551547188621" expanded="false" signature="6:108" ph="..." />
+                <marker date="1551547188621" expanded="true" signature="143:752" ph="{...}" />
+                <marker date="1551547188621" expanded="true" signature="220:750" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -110,21 +206,72 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sa</find>
+      <find>bootstrap</find>
+      <find>boo</find>
+      <find>Home</find>
+      <find>house.c</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/HouseSystem/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/HouseSystem/Controllers/SampleDataController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HouseSystem/Contexts/MonitoringContextEF.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/IMonitor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12ACC4DB-92C2-4CE4-9A4F-A2CACA4300EF/0e/63d5b75e/Thread.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A020BCAD-AE13-4113-A6A4-2D64AD3E00CA/75/b5067945/Expression.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/HouseSystem/Controllers/SampleDataController.cs" />
-        <option value="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" />
-        <option value="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" />
         <option value="$PROJECT_DIR$/HouseSystem/Contexts/MonitoringContextEF.cs" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.css" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/side-nav/side-nav.component.html" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/home/home.component.html" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.html" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail.component.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail/house-detail.component.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.service.ts" />
+        <option value="$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" />
+        <option value="$PROJECT_DIR$/HouseSystem/HouseSystem.csproj" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.service.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.component.html" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.component.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.models.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" />
         <option value="$PROJECT_DIR$/HouseSystem/Startup.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/IMonitor.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" />
+        <option value="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.models.ts" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.html" />
+        <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.ts" />
       </list>
     </option>
   </component>
@@ -134,11 +281,13 @@
     <option name="width" value="928" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
@@ -151,6 +300,55 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ClientApp" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ClientApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ClientApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="app" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ClientApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="app" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="house" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ClientApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="app" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="house" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="house-list" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ClientApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="src" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="app" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="water-meter" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -169,22 +367,56 @@
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Extensions" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Meters" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="EF" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Monitoring/Monitoring.csproj" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/HouseSystem/ClientApp/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -221,12 +453,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551525812045</updated>
-      <workItem from="1551525815125" duration="245000" />
+      <workItem from="1551525815125" duration="1174000" />
+      <workItem from="1551527033983" duration="865000" />
+      <workItem from="1551527925891" duration="3882000" />
+      <workItem from="1551533880138" duration="2775000" />
+      <workItem from="1551536846939" duration="2253000" />
+      <workItem from="1551539149697" duration="9438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245000" />
+    <option name="totallyTimeSpent" value="20387000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -241,39 +478,40 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2498618" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2642344" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="REST Client" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Build" weight="0.3295099" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39937434" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3291536" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39916405" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.3291536" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="REST Client" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.3291536" />
+      <window_info anchor="bottom" id="TypeScript" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -282,70 +520,33 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" initialLine="19">
+            <startOffsets>
+              <option value="463" />
+            </startOffsets>
+            <endOffsets>
+              <option value="486" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/SampleDataController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <marker date="1551526050730" expanded="false" signature="6:189" ph="..." />
-            <marker date="1551526050730" expanded="true" signature="224:1493" ph="{...}" />
-            <marker date="1551526050730" expanded="true" signature="309:1491" ph="{...}" />
-            <marker date="1551526050730" expanded="true" signature="413:465" ph="{...}" />
-            <marker date="1551526050730" expanded="true" signature="533:655" ph="{...}" />
-            <marker date="1551526050730" expanded="true" signature="750:1143" ph="{...}" />
-            <marker date="1551526050730" expanded="true" signature="927:1131" ph="{...}" />
-            <marker date="1551526050730" expanded="true" signature="1181:1485" ph="{...}" />
-            <marker date="1551526050730" expanded="true" signature="1380:1475" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <marker date="1551526050722" expanded="true" signature="6:81" ph="..." />
-            <marker date="1551526050722" expanded="true" signature="116:552" ph="{...}" />
-            <marker date="1551526050722" expanded="true" signature="170:550" ph="{...}" />
-            <marker date="1551526050722" expanded="true" signature="267:319" ph="{...}" />
-            <marker date="1551526050722" expanded="true" signature="379:544" ph="{...}" />
-            <marker date="1551526050722" expanded="true" signature="425:500" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding>
-            <marker date="1551526050738" expanded="false" signature="6:114" ph="..." />
-            <marker date="1551526050738" expanded="true" signature="149:1486" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="229:1484" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="338:390" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="459:536" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="604:799" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="695:757" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="907:1129" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="1025:1087" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="1213:1469" ph="{...}" />
-            <marker date="1551526050738" expanded="true" signature="1259:1415" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/SampleDataController.cs" />
     <entry file="file://$PROJECT_DIR$/HouseSystem/Contexts/MonitoringContextEF.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        <state relative-caret-position="108">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
           <folding>
-            <marker date="1551526031794" expanded="true" signature="6:103" ph="..." />
-            <marker date="1551526031794" expanded="true" signature="135:797" ph="{...}" />
+            <marker date="1551526031794" expanded="false" signature="6:103" ph="..." />
             <marker date="1551526031794" expanded="true" signature="186:795" ph="{...}" />
             <marker date="1551526031794" expanded="true" signature="302:360" ph="{...}" />
             <marker date="1551526031794" expanded="true" signature="439:569" ph="{...}" />
@@ -353,23 +554,363 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Startup.cs">
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/side-nav/side-nav.component.ts" />
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/side-nav/side-nav.component.html" />
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/home/home.component.html" />
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/styles.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.server.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/houses/houses.component.html" />
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail/house.component.css" />
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.component.ts" />
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Monitoring/IMonitor.cs" />
+    <entry file="file://$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <marker date="1551536328827" expanded="false" signature="6:201" ph="..." />
+            <marker date="1551536328827" expanded="true" signature="234:613" ph="{...}" />
+            <marker date="1551536328827" expanded="true" signature="282:611" ph="{...}" />
+            <marker date="1551536328827" expanded="true" signature="409:605" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail/house-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail/house-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/HouseSystem.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding>
-            <marker date="1551526049586" expanded="true" signature="6:350" ph="..." />
-            <marker date="1551526049586" expanded="true" signature="373:2578" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="400:2576" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="459:522" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="745:1281" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="1469:2570" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="1516:1593" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="1610:1864" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="1970:2136" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="2169:2558" ph="{...}" />
-            <marker date="1551526049586" expanded="true" signature="2200:2346" ph="/* To learn more about options for serving an Angular SPA from ASP.NET Core, ... */" />
-            <marker date="1551526049586" expanded="true" signature="2443:2544" ph="{...}" />
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/water-meter/water-meter.models.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12ACC4DB-92C2-4CE4-9A4F-A2CACA4300EF/0e/63d5b75e/Thread.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+          <folding>
+            <marker date="1551547188613" expanded="false" signature="6:164" ph="..." />
+            <marker date="1551547188613" expanded="true" signature="202:3177" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="209:391" ph="/// Обобщенный репозиторий работающий с EntityFramework ... " />
+            <marker date="1551547188613" expanded="true" signature="475:3175" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="589:686" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="758:840" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="876:932" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="1020:1104" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="1177:1331" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="1373:1459" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="1500:1619" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="1655:1711" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="1747:1868" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="1999:2086" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="2244:2418" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="2526:2745" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="2840:3051" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="2877:3011" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="2921:2997" ph="{...}" />
+            <marker date="1551547188613" expanded="true" signature="3083:3169" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <marker date="1551546089256" expanded="false" signature="6:81" ph="..." />
+            <marker date="1551546089256" expanded="true" signature="116:642" ph="{...}" />
+            <marker date="1551546089256" expanded="true" signature="202:640" ph="{...}" />
+            <marker date="1551546089256" expanded="true" signature="299:351" ph="{...}" />
+            <marker date="1551546089256" expanded="true" signature="440:634" ph="{...}" />
+            <marker date="1551546089256" expanded="true" signature="486:590" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="35" column="110" selection-start-line="35" selection-start-column="110" selection-end-line="35" selection-end-column="110" />
+          <folding>
+            <marker date="1551522280052" expanded="false" signature="6:117" ph="..." />
+            <marker date="1551522280052" expanded="true" signature="155:1974" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="162:283" ph="/// Реализация патерна единицы работы для синхронизации контекстов бд в репозиториях ... " />
+            <marker date="1551522280052" expanded="true" signature="340:1972" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="670:722" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="772:895" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="955:1093" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="1149:1281" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="1323:1446" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="1482:1538" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="1633:1848" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="1670:1838" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="1715:1791" ph="{...}" />
+            <marker date="1551522280052" expanded="true" signature="1880:1966" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A020BCAD-AE13-4113-A6A4-2D64AD3E00CA/75/b5067945/Expression.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="4122" lean-forward="true" selection-start-line="4122" selection-end-line="4122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <marker date="1551547916092" expanded="true" signature="6:107" ph="..." />
+            <marker date="1551547916092" expanded="true" signature="143:862" ph="{...}" />
+            <marker date="1551547916092" expanded="true" signature="196:860" ph="{...}" />
+            <marker date="1551547916092" expanded="true" signature="364:715" ph="{...}" />
+            <marker date="1551547916092" expanded="true" signature="417:705" ph="{...}" />
+            <marker date="1551547916092" expanded="true" signature="463:535" ph="{...}" />
+            <marker date="1551547916092" expanded="true" signature="556:691" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <marker date="1551547932840" expanded="false" signature="6:338" ph="..." />
+            <marker date="1551547932840" expanded="true" signature="361:2878" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="388:2876" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="447:510" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="733:1581" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="744:987" ph="/* services.AddDbContext&lt;MonitoringContextEF&gt;( ... */" />
+            <marker date="1551547932840" expanded="true" signature="1769:2870" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="1816:1893" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="1910:2164" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="2270:2436" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="2469:2858" ph="{...}" />
+            <marker date="1551547932840" expanded="true" signature="2500:2646" ph="/* To learn more about options for serving an Angular SPA from ASP.NET Core, ... */" />
+            <marker date="1551547932840" expanded="true" signature="2743:2844" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <marker date="1551547188621" expanded="false" signature="6:108" ph="..." />
+            <marker date="1551547188621" expanded="true" signature="143:752" ph="{...}" />
+            <marker date="1551547188621" expanded="true" signature="220:750" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/IMonitor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding>
+            <marker date="1551548522366" expanded="true" signature="6:175" ph="..." />
+            <marker date="1551548522366" expanded="true" signature="197:1307" ph="{...}" />
+            <marker date="1551548522366" expanded="true" signature="229:1305" ph="{...}" />
+            <marker date="1551548522366" expanded="true" signature="246:372" ph="/// Получить строение с максимальный потреблением ... " />
+            <marker date="1551548522366" expanded="true" signature="631:767" ph="/// Получить строение ... " />
+            <marker date="1551548522366" expanded="true" signature="815:947" ph="/// Добавить строение к мониторингу ... " />
+            <marker date="1551548522366" expanded="true" signature="1002:1263" ph="/// Зарегистрировать новый измерительный прибор в строение ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="38" column="56" lean-forward="true" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+          <folding>
+            <marker date="1551548522358" expanded="true" signature="6:254" ph="..." />
+            <marker date="1551548522358" expanded="true" signature="277:2131" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="320:2129" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="412:454" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="472:666" ph="/// Получить строение с максимальным показателем потребления воды ... " />
+            <marker date="1551548522358" expanded="true" signature="744:969" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="1042:1116" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="1250:1349" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="1394:1456" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="1508:1572" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="1615:2123" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="1724:1821" ph="{...}" />
+            <marker date="1551548522358" expanded="true" signature="1882:2110" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <marker date="1551548511278" expanded="true" signature="6:156" ph="..." />
+            <marker date="1551548511278" expanded="true" signature="191:1566" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="271:1564" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="380:432" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="506:606" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="674:869" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="765:827" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="982:1209" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="1105:1167" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="1293:1549" ph="{...}" />
+            <marker date="1551548511278" expanded="true" signature="1339:1495" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.models.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>

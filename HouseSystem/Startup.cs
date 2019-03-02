@@ -1,4 +1,3 @@
-using HomeSystems.Monitoring.Extensions;
 using HouseSystem.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,6 +6,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Monitoring.Extensions;
 
 namespace HouseSystem
 {
@@ -22,12 +22,19 @@ namespace HouseSystem
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+//            services.AddDbContext<MonitoringContextEF>(
+//                opt => opt.UseSqlServer("Server=localhost,1433;Database=Machine4;User Id=SA;Password=ZxcVda!@#123"));
+//            services.AddWaterMonitoring<MonitoringContextEF>();
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
-            services.AddDbContext<MonitoringContextEF>(
-                opt => opt.UseSqlServer("Server=localhost,1433;Database=Machine4;User Id=SA;Password=ZxcVda!@#123"));
+            services.AddDbContext<MonitoringContextEF>(options =>
+                options.UseMySql(
+                    "server=172.17.0.2;database=crypto;user=crypto;password=test;Charset=utf8;"
+                )
+            );
             services.AddWaterMonitoring<MonitoringContextEF>();
         }
 

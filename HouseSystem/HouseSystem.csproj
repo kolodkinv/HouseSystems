@@ -15,11 +15,19 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
     </ItemGroup>
 
     <ItemGroup>
         <!-- Don't publish the SPA source files, but do show them in the project files list -->
         <Content Remove="$(SpaRoot)**" />
+        <Content Include="ClientApp\src\app\house\house-detail\house-detail.component.ts" />
+        <Content Include="ClientApp\src\app\house\house-list\house-list.component.html" />
+        <Content Include="ClientApp\src\app\house\house-list\house-list.component.ts" />
+        <Content Include="ClientApp\src\app\house\house.models.ts" />
+        <Content Include="ClientApp\src\app\house\house.service.ts" />
+        <Content Include="ClientApp\src\app\water-meter\water-meter.models.ts" />
+        <Content Include="ClientApp\src\app\water-meter\water-meter.service.ts" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     </ItemGroup>

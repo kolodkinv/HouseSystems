@@ -1,7 +1,9 @@
+using System.Linq;
 using System.Threading.Tasks;
 using Monitoring;
 using Microsoft.AspNetCore.Mvc;
 using Monitoring.Models.Buildings;
+using Newtonsoft.Json;
 
 namespace HouseSystem.Controllers
 {
@@ -16,9 +18,9 @@ namespace HouseSystem.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAllAsync()
         {
-            return Ok(await _monitor.GetAllBuildings());
+            return Ok(await _monitor.GetAllBuildingsAsync(b => b.WaterMeters));
         }
 
         [HttpGet("{id}")]
@@ -34,9 +36,9 @@ namespace HouseSystem.Controllers
         }
 
         [HttpGet("api/[controller]/max/water")]
-        public async Task<IActionResult> GetWithMaxWater()
+        public async Task<IActionResult> GetWithMaxWaterAsync()
         {
-            var house = await _monitor.GetBuildingWithMaxWaterConsumption();
+            var house = await _monitor.GetBuildingWithMaxWaterConsumptionAsync();
             if (house != null)
             {
                 return Ok(house);

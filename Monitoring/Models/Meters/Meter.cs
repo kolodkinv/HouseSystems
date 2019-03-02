@@ -1,5 +1,7 @@
 using System;
+using System.Runtime.Serialization;
 using Monitoring.Models.Buildings;
+using Newtonsoft.Json;
 
 namespace Monitoring.Models.Meters
 {
@@ -26,6 +28,8 @@ namespace Monitoring.Models.Meters
             }
         }
         // Здание в котором он установлен
+        [JsonIgnore] 
+        [IgnoreDataMember] 
         public Building Building { get; set; }
     }
 }

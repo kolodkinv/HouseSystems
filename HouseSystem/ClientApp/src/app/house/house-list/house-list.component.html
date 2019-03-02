@@ -1,0 +1,27 @@
+<div class="container">
+  <h5 class="h5">Список домов</h5>
+  <div class="row">
+    <table class='table table-striped' *ngIf="houses">
+      <thead>
+      <tr>
+        <th>ИД</th>
+        <th>Адрес</th>
+        <th>Показания расхода воды</th>
+        <th>Операции</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let house of houses" >
+        <td>{{ house.id }}</td>
+        <td>{{ house.address }}</td>
+        <td *ngIf="house.waterMeters.length > 0"> {{house.waterMeters[0].value}}</td>
+        <td *ngIf="house.waterMeters.length == 0"> Нет данных </td>
+        <td>
+          <app-water-meter *ngIf="editHouse.id == house.id" [houseId]="editHouse.id" (onCancel)="onCancel()"></app-water-meter>
+          <button *ngIf="editHouse.id != house.id" class="btn btn-sm btn-primary" (click)="startEditHouse(house)">Зарегистрировать новый счетчик воды</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -7,7 +7,6 @@
     <e p="$PROJECT_DIR$/../.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_HouseSystem.-2083993823.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="HouseSystem" t="IncludeRecursive">
-        <e p=".gitignore" t="Include" />
         <e p="ClientApp" t="Include">
           <e p=".editorconfig" t="Include" />
           <e p=".gitignore" t="Include" />

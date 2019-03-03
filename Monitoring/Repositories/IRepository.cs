@@ -10,7 +10,6 @@ namespace Monitoring.Repositories
     {
         Task<IEnumerable<T>> GetAllAsync();
         T Get(int id);
-        Task<T> GetAsync(Expression<Func<T, bool>> predicate);
         IEnumerable<T> Find(Func<T, bool> predicate);
         void Create(T item);
         void Update(T item);

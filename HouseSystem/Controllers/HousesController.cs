@@ -21,6 +21,11 @@ namespace HouseSystem.Controllers
             _monitor = monitor;
         }
         
+        /// <summary>
+        /// Получение информации о домах
+        /// </summary>
+        /// <param name="filter">Параметр фильтрации</param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetAllAsync(Filter filter)
         {
@@ -63,6 +68,11 @@ namespace HouseSystem.Controllers
             return BadRequest(ModelState);
         }
         
+        /// <summary>
+        /// Получение детальной информации о доме
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -75,12 +85,13 @@ namespace HouseSystem.Controllers
             return NotFound();
         }
 
+        // Регистрация нового дома
         [HttpPost]
         public IActionResult Create([FromBody] House house)
         {
             if (ModelState.IsValid)
             {
-                _monitor.AddBuilding(house);          
+                _monitor.AddBuilding(house);    
                 return CreatedAtAction(nameof(Get), new { id = house.Id }, house);
             }
 

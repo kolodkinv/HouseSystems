@@ -5,13 +5,18 @@ using Newtonsoft.Json;
 
 namespace Monitoring.Models.Meters
 {
-    // Измерительный прибор
+    /// <summary>
+    /// Измерительный счетчик
+    /// </summary>
     public class Meter
     {
         private double _value;
-
         private int _id;
-        // Заводской номер прибора
+        
+        /// <summary>
+        /// Заводской номер счетчика
+        /// </summary>
+        /// <exception cref="ArgumentException">Исключение при установке некорректного заводского номера</exception>
         public int Id
         {
             get => _id;
@@ -27,7 +32,11 @@ namespace Monitoring.Models.Meters
                 }
             }
         }
-        // Показания прибора
+        
+        /// <summary>
+        /// Показания счетчика
+        /// </summary>
+        /// <exception cref="ArgumentException">Исключение при установке некорректного значения</exception>
         public double Value
         {
             get => _value;
@@ -43,11 +52,17 @@ namespace Monitoring.Models.Meters
                 }
             }
         }
-        // Здание в котором он установлен
+        
+        /// <summary>
+        /// Постройка в котором установлен счетчик
+        /// </summary>
         [JsonIgnore] 
         [IgnoreDataMember] 
         public Building Building { get; set; }
         
+        /// <summary>
+        /// Ид здания в котором установлен счетчик
+        /// </summary>
         public int BuildingId { get; set; }
     }
 }

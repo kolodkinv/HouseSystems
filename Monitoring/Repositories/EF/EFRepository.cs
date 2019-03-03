@@ -9,9 +9,9 @@ using Monitoring.Exceptions;
 namespace Monitoring.Repositories.EF
 {
     /// <summary>
-    /// Обобщенный репозиторий работающий с EntityFramework
+    /// Обобщенный репозиторий работающий с Entity Framework
     /// </summary>
-    /// <typeparam name="TEntity">Тип объекта с которыми работает репозиторий</typeparam>
+    /// <typeparam name="TEntity">Тип объекта с которым работает репозиторий</typeparam>
     public class EFRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         DbContext _context;
@@ -23,21 +23,30 @@ namespace Monitoring.Repositories.EF
             _dbSet = context.Set<TEntity>();
         }
          
+        /// <summary>
+        /// Получение всех объектов в репозитории
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _dbSet.AsNoTracking().ToListAsync();
         }
 
+        /// <summary>
+        /// Получение объекта в репозитории по его Id
+        /// </summary>
+        /// <param name="id">Id объекта</param>
+        /// <returns>Объект в репозитории</returns>
         public TEntity Get(int id)
         {
             return _dbSet.Find(id);
         }
 
-        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await _dbSet.FirstOrDefaultAsync(predicate);
-        }
-
+        /// <summary>
+        /// Получить список объектов удовлетворяющих условию
+        /// </summary>
+        /// <param name="predicate">Условие</param>
+        /// <returns>Список найденных объектов</returns>
         public IEnumerable<TEntity> Find(Func<TEntity, bool> predicate)
         {
             return _dbSet.AsNoTracking()
@@ -46,34 +55,60 @@ namespace Monitoring.Repositories.EF
                 .ToList();
         }
 
+        /// <summary>
+        /// Добавление объекта в репозиторий
+        /// </summary>
+        /// <param name="item">Добавляемый объекта</param>
         public void Create(TEntity item)
         {
             _dbSet.Add(item);
-            _context.SaveChanges();
         }
+        
+        /// <summary>
+        /// Редактирование объекта в репозитории
+        /// </summary>
+        /// <param name="item">Редактируемый объект</param>
         public void Update(TEntity item)
         {
             _context.Entry(item).State = EntityState.Modified;
-            _context.SaveChanges();
+            //_context.SaveChanges();
         }
         
+        /// <summary>
+        /// Сохранение изменений в репозитории
+        /// </summary>
         public void Save()
         {
             _context.SaveChanges();
         }
 
+        /// <summary>
+        /// Удаление обхекта из репозитория
+        /// </summary>
+        /// <param name="id">Id удаляемого объекта</param>
         public void Delete(int id)
         {
             var item = Get(id);
             _dbSet.Remove(item);
-            _context.SaveChanges();
+            //_context.SaveChanges();
         }
 
+        /// <summary>
+        /// Получение списка объектов в репозитории включая выбранные свойства
+        /// </summary>
+        /// <param name="includeProperties">Включаемые в объекты свойства</param>
+        /// <returns>Список объектов</returns>
         public async Task<IEnumerable<TEntity>> GetWithIncludeAsync(params Expression<Func<TEntity, object>>[] includeProperties)
         {
             return await Include(includeProperties).ToListAsync();
         }
  
+        /// <summary>
+        /// Получение списка объектов в репозитории удовлетворяюхищ условию включая выбранные свойства
+        /// </summary>
+        /// <param name="predicate">Условие фильтрации списка</param>
+        /// <param name="includeProperties">Включаемые в объекты свойства</param>
+        /// <returns>Список объектов</returns>
         public IEnumerable<TEntity> GetWithInclude(Func<TEntity,bool> predicate, 
             params Expression<Func<TEntity, object>>[] includeProperties)
         {
@@ -83,6 +118,11 @@ namespace Monitoring.Repositories.EF
                 .ToList();
         }
  
+        /// <summary>
+        /// Включение данных в объекты. Реализация ранней загрузки данных.
+        /// </summary>
+        /// <param name="includeProperties">Включаемые в объекты свойства</param>
+        /// <returns></returns>
         private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
         {
             IQueryable<TEntity> query = _dbSet.AsNoTracking();

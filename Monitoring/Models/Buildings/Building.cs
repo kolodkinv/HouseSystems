@@ -3,18 +3,27 @@ using Monitoring.Models.Meters;
 
 namespace Monitoring.Models.Buildings
 {
-    // Постройка у которой имеется набор измерительных приборов
+    /// <summary>
+    /// Строение, к которого имеется набор измерительных счетчиков
+    /// </summary>
     public class Building
     {
         public int Id { get; set; }
-        // Уникальный адрес здания
+        
+        /// <summary>
+        /// Адрес здания. Его уникальность устанавливается через Fluent API
+        /// </summary>
         public string Address { get; set; }
-        // Набор измерительных приборов.
-        // Возможно расширение типов и количества счетчиков в зданиии
+        
+        /// <summary>
+        /// Набор измерительных счетчиков в строении.
+        /// Хранит в себе разные типы счетчиков
+        /// </summary>
         public ICollection<Meter> Meters { get; set; }
         
-        // Набор водянных счетчиков
-        // Возможно расширение водяных счетчиков до количества больше 1
+        /// <summary>
+        /// Водяной счетчик установленный в здании
+        /// </summary>
         public WaterMeter WaterMeter { get; set; }
     }
 }

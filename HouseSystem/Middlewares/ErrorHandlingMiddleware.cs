@@ -7,6 +7,9 @@ using Newtonsoft.Json;
 
 namespace HouseSystem.Middlewares
 {
+    /// <summary>
+    /// Middleware для обработки исключений мониторинга
+    /// </summary>
     public class ErrorHandlingMiddleware
     {
         private readonly RequestDelegate next;

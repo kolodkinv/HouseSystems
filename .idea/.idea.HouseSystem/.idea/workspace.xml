@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b8ced03-1f45-41b9-8c12-8e1ccf553e38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Monitoring.Tests/WaterMonitorTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HouseSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HouseSystem/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HouseSystem/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HouseSystem.sln" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HouseSystem/Contexts/MonitoringContextEF.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Contexts/MonitoringContextEF.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HouseSystem/Middlewares/ErrorHandlingMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/Middlewares/ErrorHandlingMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HouseSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HouseSystem/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Exceptions/NotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Exceptions/NotFoundException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monitoring/IMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/IMonitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Models/Buildings/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Models/Buildings/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Models/Buildings/House.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Models/Buildings/House.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Models/Meters/WaterMeter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Models/Meters/WaterMeter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Monitoring/Repositories/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Repositories/IUnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,16 +28,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Monitoring/IMonitor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="540">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
-                <marker date="1551614769453" expanded="false" signature="6:175" ph="..." />
-                <marker date="1551614769453" expanded="true" signature="197:1489" ph="{...}" />
-                <marker date="1551614769453" expanded="true" signature="244:1487" ph="{...}" />
-                <marker date="1551614769453" expanded="true" signature="261:387" ph="/// Получить строение с максимальный потреблением ... " />
-                <marker date="1551614769453" expanded="true" signature="654:790" ph="/// Получить строение ... " />
-                <marker date="1551614769453" expanded="true" signature="997:1129" ph="/// Добавить строение к мониторингу ... " />
-                <marker date="1551614769453" expanded="true" signature="1184:1445" ph="/// Зарегистрировать новый измерительный прибор в строение ... " />
+                <marker date="1551617871061" expanded="false" signature="6:175" ph="..." />
+                <marker date="1551617871061" expanded="true" signature="197:2111" ph="{...}" />
+                <marker date="1551617871061" expanded="true" signature="244:2109" ph="{...}" />
+                <marker date="1551617871061" expanded="true" signature="261:410" ph="/// Получить строение с максимальный потреблением ... " />
+                <marker date="1551617871061" expanded="true" signature="486:693" ph="///  ... " />
+                <marker date="1551617871061" expanded="true" signature="824:988" ph="/// Получить строение ... " />
+                <marker date="1551617871061" expanded="true" signature="1036:1340" ph="///  ... " />
+                <marker date="1551617871061" expanded="true" signature="1488:1659" ph="///  ... " />
+                <marker date="1551617871061" expanded="true" signature="1701:1833" ph="/// Добавить строение к мониторингу ... " />
+                <marker date="1551617871061" expanded="true" signature="1888:2067" ph="/// Зарегистрировать новый измерительный прибор в строение ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/Parameters/Filter.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+              <folding>
+                <marker date="1551555423123" expanded="true" signature="32:528" ph="{...}" />
+                <marker date="1551555423123" expanded="true" signature="39:114" ph="/// Параметр фильтрации в GET запросах ... " />
+                <marker date="1551555423123" expanded="true" signature="138:526" ph="{...}" />
+                <marker date="1551555423123" expanded="true" signature="153:251" ph="/// Поле по которому фильтруется максимальный элемент ... " />
+                <marker date="1551555423123" expanded="true" signature="307:416" ph="/// Показывает что фильтр пустой ... " />
+                <marker date="1551555423123" expanded="true" signature="454:520" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-81">
+              <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+              <folding>
+                <marker date="1551604367480" expanded="false" signature="6:368" ph="..." />
+                <marker date="1551604367480" expanded="true" signature="391:2972" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="418:2970" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="477:540" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="763:1611" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="774:1017" ph="/* services.AddDbContext&lt;MonitoringContextEF&gt;( ... */" />
+                <marker date="1551604367480" expanded="true" signature="1799:2964" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="1846:1923" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="1940:2194" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="2364:2530" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="2563:2952" ph="{...}" />
+                <marker date="1551604367480" expanded="true" signature="2594:2740" ph="/* To learn more about options for serving an Angular SPA from ASP.NET Core, ... */" />
+                <marker date="1551604367480" expanded="true" signature="2837:2938" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -49,144 +90,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
-              <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
+            <state relative-caret-position="714">
+              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
               <folding>
-                <marker date="1551610882945" expanded="false" signature="6:193" ph="..." />
-                <marker date="1551610882945" expanded="true" signature="231:3206" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="238:420" ph="/// Обобщенный репозиторий работающий с EntityFramework ... " />
-                <marker date="1551610882945" expanded="true" signature="504:3204" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="618:715" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="787:869" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="905:961" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="1049:1133" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="1206:1360" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="1402:1488" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="1529:1648" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="1684:1740" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="1776:1897" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="2028:2115" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="2273:2447" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="2555:2774" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="2869:3080" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="2906:3040" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="2950:3026" ph="{...}" />
-                <marker date="1551610882945" expanded="true" signature="3112:3198" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="50" />
-              <folding>
-                <marker date="1551547188621" expanded="false" signature="6:108" ph="..." />
-                <marker date="1551547188621" expanded="true" signature="143:752" ph="{...}" />
-                <marker date="1551547188621" expanded="true" signature="220:750" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Monitoring.Tests/WaterMonitorTest.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-              <folding>
-                <marker date="1551615308507" expanded="true" signature="6:351" ph="..." />
-                <marker date="1551615308507" expanded="true" signature="379:7308" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="386:473" ph="///  ... " />
-                <marker date="1551615308507" expanded="true" signature="507:7306" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="522:688" ph="///  ... " />
-                <marker date="1551615308507" expanded="true" signature="775:1190" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="1300:1978" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="1431:1944" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="2088:3249" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="2219:3239" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="2518:2641" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="3377:5048" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="3508:5038" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="3949:4073" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="4144:4268" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="5179:6184" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="5310:6174" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="5590:5713" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="6318:7300" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="6449:7290" ph="{...}" />
-                <marker date="1551615308507" expanded="true" signature="6587:6700" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-              <folding>
-                <marker date="1551610687409" expanded="false" signature="6:161" ph="..." />
-                <marker date="1551610687409" expanded="true" signature="196:1056" ph="{...}" />
-                <marker date="1551610687409" expanded="true" signature="282:1054" ph="{...}" />
-                <marker date="1551610687409" expanded="true" signature="379:431" ph="{...}" />
-                <marker date="1551610687409" expanded="true" signature="499:691" ph="{...}" />
-                <marker date="1551610687409" expanded="true" signature="587:649" ph="{...}" />
-                <marker date="1551610687409" expanded="true" signature="788:1048" ph="{...}" />
-                <marker date="1551610687409" expanded="true" signature="834:1004" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="130" column="34" lean-forward="true" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
-              <folding>
-                <marker date="1551614769469" expanded="false" signature="6:291" ph="..." />
-                <marker date="1551614769469" expanded="true" signature="314:4302" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="357:4300" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="458:500" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="518:712" ph="/// Получить строение с максимальным показателем потребления воды ... " />
-                <marker date="1551614769469" expanded="true" signature="790:1346" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="1112:1310" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="1419:1493" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="1640:1739" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="1784:1846" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="1978:2094" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="2133:2192" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="2244:2525" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="2270:2346" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="2384:2507" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="2568:3867" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="2689:2786" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="2855:3600" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="3162:3272" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="3632:3688" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="3726:3855" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="3970:4176" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="4007:4136" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="4051:4122" ph="{...}" />
-                <marker date="1551614769469" expanded="true" signature="4208:4294" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IUnitOfWork.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-              <folding>
-                <marker date="1551614737497" expanded="true" signature="6:80" ph="..." />
-                <marker date="1551614737497" expanded="true" signature="115:388" ph="{...}" />
-                <marker date="1551614737497" expanded="true" signature="164:386" ph="{...}" />
+                <marker date="1551617871073" expanded="false" signature="6:193" ph="..." />
+                <marker date="1551617871073" expanded="true" signature="231:4929" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="238:420" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="504:4927" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="618:715" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="734:852" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="914:996" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="1006:1196" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="1231:1287" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="1297:1503" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="1575:1729" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="1739:1879" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="1920:1970" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="1988:2133" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="2174:2295" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="2313:2396" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="2423:2479" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="2489:2628" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="2663:2786" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="2796:3040" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="3170:3257" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="3268:3606" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="3762:3936" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="3947:4172" ph="///  ... " />
+                <marker date="1551617871073" expanded="true" signature="4278:4497" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="4592:4803" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="4629:4763" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="4673:4749" ph="{...}" />
+                <marker date="1551617871073" expanded="true" signature="4835:4921" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -195,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="-1041">
               <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
                 <marker date="1551614769477" expanded="false" signature="6:117" ph="..." />
@@ -218,56 +153,128 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9152434B-0FAC-463B-87F2-DD9AF798817F/1e/9177512e/Assert.cs">
+        <entry file="file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="812" column="6" selection-start-line="812" selection-start-column="6" selection-end-line="812" selection-end-column="6" />
+            <state relative-caret-position="2646">
+              <caret line="107" column="75" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
+              <folding>
+                <marker date="1551617871081" expanded="false" signature="6:291" ph="..." />
+                <marker date="1551617871081" expanded="true" signature="314:5357" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="357:5355" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="458:500" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="518:667" ph="/// Получить строение с максимальный потреблением воды ... " />
+                <marker date="1551617871081" expanded="true" signature="745:1301" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="1067:1265" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="1319:1526" ph="/// Получить все постройки включая свойства ... " />
+                <marker date="1551617871081" expanded="true" signature="1672:1771" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="1781:1945" ph="/// Получить строение ... " />
+                <marker date="1551617871081" expanded="true" signature="1989:2051" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="2061:2365" ph="/// Получить список строений отфильтрованных по условии и включающих свойства ... " />
+                <marker date="1551617871081" expanded="true" signature="2496:2612" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="2622:2793" ph="/// Получить данные о счетчике ... " />
+                <marker date="1551617871081" expanded="true" signature="2831:2890" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="2900:3032" ph="/// Добавить строение к мониторингу ... " />
+                <marker date="1551617871081" expanded="true" signature="3083:3392" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="3109:3213" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="3251:3374" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="3402:3581" ph="/// Зарегистрировать новый измерительный прибор в строении ... " />
+                <marker date="1551617871081" expanded="true" signature="3623:4922" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="3744:3841" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="3910:4655" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="4217:4327" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="4687:4743" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="4781:4910" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="5025:5231" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="5062:5191" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="5106:5177" ph="{...}" />
+                <marker date="1551617871081" expanded="true" signature="5263:5349" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12ACC4DB-92C2-4CE4-9A4F-A2CACA4300EF/0e/63d5b75e/Thread.cs">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+            <state relative-caret-position="336">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding>
-                <marker date="1550753782488" expanded="true" signature="0:323" ph="/* Decompiled with JetBrains decompiler ... */" />
-                <marker date="1550753782488" expanded="true" signature="533:7074" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="582:7072" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="1062:1074" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="1112:1254" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="1312:1600" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="1651:1793" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="1864:2152" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="2191:2239" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="2381:2629" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="2674:2878" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="2907:3094" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="3142:3287" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="3158:3214" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="3224:3281" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="3347:3504" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="3363:3425" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="3435:3498" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="3887:3948" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="4116:4171" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="4310:4359" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="4399:4485" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="4415:4479" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="4733:5042" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="5175:5218" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="5353:5637" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="5369:5430" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="5440:5631" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="5676:5956" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="5692:5751" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="5761:5950" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="6331:6418" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="6457:6510" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="6538:6922" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="6554:6598" ph="{...}" />
-                <marker date="1550753782488" expanded="true" signature="6608:6916" ph="{...}" />
+                <marker date="1551617871097" expanded="false" signature="6:266" ph="..." />
+                <marker date="1551617871097" expanded="true" signature="301:2923" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="381:2921" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="490:542" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="560:730" ph="///  ... " />
+                <marker date="1551617871097" expanded="true" signature="816:1185" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="862:1131" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="914:1058" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="1195:1368" ph="/// Фильтрация домов по параметрам ... " />
+                <marker date="1551617871097" expanded="true" signature="1446:2095" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="1507:1891" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="1567:1877" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="1908:2029" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="2113:2269" ph="///  ... " />
+                <marker date="1551617871097" expanded="true" signature="2336:2531" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="2427:2489" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="2646:2906" ph="{...}" />
+                <marker date="1551617871097" expanded="true" signature="2692:2852" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/Middlewares/ErrorHandlingMiddleware.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+              <folding>
+                <marker date="1551617871089" expanded="true" signature="6:146" ph="..." />
+                <marker date="1551617871089" expanded="true" signature="181:1625" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="188:276" ph="///  ... " />
+                <marker date="1551617871089" expanded="true" signature="317:1623" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="432:482" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="537:756" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="563:628" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="661:746" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="848:1617" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="1122:1200" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="1219:1280" ph="{...}" />
+                <marker date="1551617871089" expanded="true" signature="1339:1433" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+              <folding>
+                <marker date="1551617871105" expanded="false" signature="6:161" ph="..." />
+                <marker date="1551617871105" expanded="true" signature="196:1397" ph="{...}" />
+                <marker date="1551617871105" expanded="true" signature="282:1395" ph="{...}" />
+                <marker date="1551617871105" expanded="true" signature="379:431" ph="{...}" />
+                <marker date="1551617871105" expanded="true" signature="441:595" ph="///  ... " />
+                <marker date="1551617871105" expanded="true" signature="662:854" ph="{...}" />
+                <marker date="1551617871105" expanded="true" signature="750:812" ph="{...}" />
+                <marker date="1551617871105" expanded="true" signature="872:1041" ph="///  ... " />
+                <marker date="1551617871105" expanded="true" signature="1129:1389" ph="{...}" />
+                <marker date="1551617871105" expanded="true" signature="1175:1345" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding>
+                <marker date="1551616809425" expanded="false" signature="6:108" ph="..." />
+                <marker date="1551616809425" expanded="true" signature="143:689" ph="{...}" />
+                <marker date="1551616809425" expanded="true" signature="220:687" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -290,6 +297,7 @@
       <find>Home</find>
       <find>house.c</find>
       <find>len</find>
+      <find>Create</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -315,6 +323,7 @@
     <setting file="file://$PROJECT_DIR$/Monitoring/Repositories/IUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Monitoring/Models/Buildings/House.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Monitoring/Models/Meters/WaterMeter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" root0="FORCE_HIGHLIGHTING" />
@@ -336,9 +345,7 @@
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/nav-menu/nav-menu.component.html" />
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail.component.ts" />
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" />
         <option value="$PROJECT_DIR$/HouseSystem/HouseSystem.csproj" />
-        <option value="$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" />
         <option value="$PROJECT_DIR$/HouseSystem/Controllers/AnalyticsController.cs" />
         <option value="$PROJECT_DIR$/HouseSystem/Parameters/Filter.cs" />
         <option value="$PROJECT_DIR$/HouseSystem/Dto/WaterMeterDto.cs" />
@@ -350,7 +357,6 @@
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.service.ts" />
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail/house-detail.component.ts" />
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-detail/house-detail.component.html" />
-        <option value="$PROJECT_DIR$/Monitoring/Models/Buildings/Building.cs" />
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house.models.ts" />
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.ts" />
         <option value="$PROJECT_DIR$/HouseSystem/ClientApp/src/app/house/house-list/house-list.component.html" />
@@ -358,18 +364,24 @@
         <option value="$PROJECT_DIR$/HouseSystem/Startup.cs" />
         <option value="$PROJECT_DIR$/Monitoring/Contexts/MonitoringContextEF.cs" />
         <option value="$PROJECT_DIR$/Monitoring/Exceptions/DuplicateAddressException.cs" />
-        <option value="$PROJECT_DIR$/HouseSystem/Middlewares/ErrorHandlingMiddleware.cs" />
-        <option value="$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs" />
-        <option value="$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" />
         <option value="$PROJECT_DIR$/Monitoring.Tests/InMemoryContext.cs" />
-        <option value="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" />
-        <option value="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" />
-        <option value="$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" />
-        <option value="$PROJECT_DIR$/Monitoring/IMonitor.cs" />
-        <option value="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" />
         <option value="$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs" />
         <option value="$PROJECT_DIR$/Monitoring/Repositories/IUnitOfWork.cs" />
         <option value="$PROJECT_DIR$/Monitoring.Tests/WaterMonitorTest.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Exceptions/NotFoundException.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Models/Buildings/House.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Models/Meters/WaterMeter.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Models/Buildings/Building.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/IMonitor.cs" />
+        <option value="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" />
+        <option value="$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs" />
+        <option value="$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs" />
+        <option value="$PROJECT_DIR$/HouseSystem/Middlewares/ErrorHandlingMiddleware.cs" />
       </list>
     </option>
   </component>
@@ -401,71 +413,23 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Middlewares" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Parameters" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Contexts" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Exceptions" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Meters" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Monitoring" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="EF" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Monitoring.Tests" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="HouseSystem" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Monitoring.Tests" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -531,12 +495,12 @@
       <workItem from="1551539149697" duration="10809000" />
       <workItem from="1551551683465" duration="11475000" />
       <workItem from="1551593647989" duration="1856000" />
-      <workItem from="1551595954442" duration="19348000" />
+      <workItem from="1551595954442" duration="21910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54437000" />
+    <option name="totallyTimeSpent" value="56999000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,9 +513,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27418464" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27418464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -593,32 +556,10 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs</url>
-          <line>85</line>
-          <properties documentPath="$PROJECT_DIR$/Monitoring/WaterMonitor.cs" initialLine="85">
-            <startOffsets>
-              <option value="2591" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2642" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/app.server.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/src/app/houses/houses.component.html" />
     <entry file="file://$PROJECT_DIR$/HouseSystem/ClientApp/angular.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -654,19 +595,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Monitoring/Monitoring/IMonitor.cs" />
-    <entry file="file://$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <marker date="1551536328827" expanded="false" signature="6:201" ph="..." />
-            <marker date="1551536328827" expanded="true" signature="234:613" ph="{...}" />
-            <marker date="1551536328827" expanded="true" signature="282:611" ph="{...}" />
-            <marker date="1551536328827" expanded="true" signature="409:605" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HouseSystem/HouseSystem.csproj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
@@ -682,36 +610,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/AnalyticsController.cs" />
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Parameters/Filter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <marker date="1551555423123" expanded="true" signature="32:528" ph="{...}" />
-            <marker date="1551555423123" expanded="true" signature="39:114" ph="///  ... " />
-            <marker date="1551555423123" expanded="true" signature="138:526" ph="{...}" />
-            <marker date="1551555423123" expanded="true" signature="153:251" ph="///  ... " />
-            <marker date="1551555423123" expanded="true" signature="307:416" ph="/// Показывает что фильтр пустой ... " />
-            <marker date="1551555423123" expanded="true" signature="454:520" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/12ACC4DB-92C2-4CE4-9A4F-A2CACA4300EF/ee/47134453/ExceptionDispatchInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Meters/WaterMeter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding>
-            <marker date="1551521300771" expanded="true" signature="34:95" ph="{...}" />
-            <marker date="1551521300771" expanded="true" signature="72:93" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,20 +665,6 @@
           <folding>
             <element signature="e#231#238#1" expanded="true" />
             <element signature="e#785#792#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Buildings/Building.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <marker date="1551601053370" expanded="false" signature="6:65" ph="..." />
-            <marker date="1551601053370" expanded="true" signature="104:659" ph="{...}" />
-            <marker date="1551601053370" expanded="true" signature="196:657" ph="{...}" />
-            <marker date="1551601053370" expanded="true" signature="326:428" ph="/* Набор измерительных приборов. ... */" />
-            <marker date="1551601053370" expanded="true" signature="501:600" ph="/* Набор водянных счетчиков ... */" />
           </folding>
         </state>
       </provider>
@@ -836,92 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Exceptions/NotFoundException.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <marker date="1551521675722" expanded="true" signature="46:197" ph="{...}" />
-            <marker date="1551521675722" expanded="true" signature="94:195" ph="{...}" />
-            <marker date="1551521675722" expanded="true" signature="177:189" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="35" />
-          <folding>
-            <marker date="1551607716908" expanded="true" signature="46:200" ph="{...}" />
-            <marker date="1551607716908" expanded="true" signature="96:198" ph="{...}" />
-            <marker date="1551607716908" expanded="true" signature="180:192" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Middlewares/ErrorHandlingMiddleware.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-          <folding>
-            <marker date="1551607716912" expanded="false" signature="6:146" ph="..." />
-            <marker date="1551607716912" expanded="true" signature="181:1532" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="224:1530" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="339:389" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="444:663" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="470:535" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="568:653" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="755:1524" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="1029:1107" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="1126:1187" ph="{...}" />
-            <marker date="1551607716912" expanded="true" signature="1246:1340" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <marker date="1551608037565" expanded="false" signature="6:107" ph="..." />
-            <marker date="1551608037565" expanded="true" signature="143:1259" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="196:1257" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="316:651" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="366:641" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="411:480" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="501:627" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="708:1059" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="761:1049" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="807:879" ph="{...}" />
-            <marker date="1551608037565" expanded="true" signature="900:1035" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-          <folding>
-            <marker date="1551604367480" expanded="false" signature="6:368" ph="..." />
-            <marker date="1551604367480" expanded="true" signature="391:2972" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="418:2970" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="477:540" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="763:1611" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="774:1017" ph="/* services.AddDbContext&lt;MonitoringContextEF&gt;( ... */" />
-            <marker date="1551604367480" expanded="true" signature="1799:2964" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="1846:1923" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="1940:2194" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="2364:2530" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="2563:2952" ph="{...}" />
-            <marker date="1551604367480" expanded="true" signature="2594:2740" ph="/* To learn more about options for serving an Angular SPA from ASP.NET Core, ... */" />
-            <marker date="1551604367480" expanded="true" signature="2837:2938" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Monitoring.Tests/InMemoryContext.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -947,45 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Contexts/MonitoringContextEF.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <marker date="1551606845371" expanded="false" signature="6:103" ph="..." />
-            <marker date="1551606845371" expanded="true" signature="134:916" ph="{...}" />
-            <marker date="1551606845371" expanded="true" signature="185:914" ph="{...}" />
-            <marker date="1551606845371" expanded="true" signature="301:359" ph="{...}" />
-            <marker date="1551606845371" expanded="true" signature="438:688" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
-          <folding>
-            <marker date="1551610687405" expanded="false" signature="6:266" ph="..." />
-            <marker date="1551610687405" expanded="true" signature="301:2550" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="381:2548" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="490:542" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="637:1006" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="683:952" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="735:879" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="1016:1189" ph="/// Фильтрация домов по параметрам ... " />
-            <marker date="1551610687405" expanded="true" signature="1267:1916" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="1328:1712" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="1388:1698" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="1729:1850" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="1992:2187" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="2083:2145" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="2267:2533" ph="{...}" />
-            <marker date="1551610687405" expanded="true" signature="2313:2479" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,103 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <marker date="1551610687409" expanded="false" signature="6:161" ph="..." />
-            <marker date="1551610687409" expanded="true" signature="196:1056" ph="{...}" />
-            <marker date="1551610687409" expanded="true" signature="282:1054" ph="{...}" />
-            <marker date="1551610687409" expanded="true" signature="379:431" ph="{...}" />
-            <marker date="1551610687409" expanded="true" signature="499:691" ph="{...}" />
-            <marker date="1551610687409" expanded="true" signature="587:649" ph="{...}" />
-            <marker date="1551610687409" expanded="true" signature="788:1048" ph="{...}" />
-            <marker date="1551610687409" expanded="true" signature="834:1004" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="50" />
-          <folding>
-            <marker date="1551547188621" expanded="false" signature="6:108" ph="..." />
-            <marker date="1551547188621" expanded="true" signature="143:752" ph="{...}" />
-            <marker date="1551547188621" expanded="true" signature="220:750" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/IMonitor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <marker date="1551614769453" expanded="false" signature="6:175" ph="..." />
-            <marker date="1551614769453" expanded="true" signature="197:1489" ph="{...}" />
-            <marker date="1551614769453" expanded="true" signature="244:1487" ph="{...}" />
-            <marker date="1551614769453" expanded="true" signature="261:387" ph="/// Получить строение с максимальный потреблением ... " />
-            <marker date="1551614769453" expanded="true" signature="654:790" ph="/// Получить строение ... " />
-            <marker date="1551614769453" expanded="true" signature="997:1129" ph="/// Добавить строение к мониторингу ... " />
-            <marker date="1551614769453" expanded="true" signature="1184:1445" ph="/// Зарегистрировать новый измерительный прибор в строение ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="110" selection-end-column="9" />
-          <folding>
-            <marker date="1551610882945" expanded="false" signature="6:193" ph="..." />
-            <marker date="1551610882945" expanded="true" signature="231:3206" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="238:420" ph="/// Обобщенный репозиторий работающий с EntityFramework ... " />
-            <marker date="1551610882945" expanded="true" signature="504:3204" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="618:715" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="787:869" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="905:961" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="1049:1133" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="1206:1360" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="1402:1488" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="1529:1648" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="1684:1740" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="1776:1897" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="2028:2115" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="2273:2447" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="2555:2774" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="2869:3080" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="2906:3040" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="2950:3026" ph="{...}" />
-            <marker date="1551610882945" expanded="true" signature="3112:3198" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <marker date="1551614769477" expanded="false" signature="6:117" ph="..." />
-            <marker date="1551614769477" expanded="true" signature="155:1961" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="162:283" ph="/// Реализация патерна единицы работы для синхронизации контекстов бд в репозиториях ... " />
-            <marker date="1551614769477" expanded="true" signature="327:1959" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="657:709" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="759:882" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="942:1080" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="1136:1268" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="1310:1433" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="1469:1525" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="1620:1835" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="1657:1825" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="1702:1778" ph="{...}" />
-            <marker date="1551614769477" expanded="true" signature="1867:1953" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IUnitOfWork.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1150,44 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="130" column="34" lean-forward="true" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
-          <folding>
-            <marker date="1551614769469" expanded="false" signature="6:291" ph="..." />
-            <marker date="1551614769469" expanded="true" signature="314:4302" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="357:4300" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="458:500" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="518:712" ph="/// Получить строение с максимальным показателем потребления воды ... " />
-            <marker date="1551614769469" expanded="true" signature="790:1346" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="1112:1310" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="1419:1493" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="1640:1739" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="1784:1846" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="1978:2094" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="2133:2192" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="2244:2525" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="2270:2346" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="2384:2507" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="2568:3867" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="2689:2786" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="2855:3600" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="3162:3272" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="3632:3688" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="3726:3855" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="3970:4176" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="4007:4136" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="4051:4122" ph="{...}" />
-            <marker date="1551614769469" expanded="true" signature="4208:4294" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Monitoring.Tests/WaterMonitorTest.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        <state relative-caret-position="3753">
+          <caret line="163" column="27" lean-forward="true" selection-start-line="163" selection-start-column="27" selection-end-line="163" selection-end-column="27" />
           <folding>
             <marker date="1551615308507" expanded="true" signature="6:351" ph="..." />
             <marker date="1551615308507" expanded="true" signature="379:7308" ph="{...}" />
@@ -1210,6 +842,360 @@
             <marker date="1551615308507" expanded="true" signature="6318:7300" ph="{...}" />
             <marker date="1551615308507" expanded="true" signature="6449:7290" ph="{...}" />
             <marker date="1551615308507" expanded="true" signature="6587:6700" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Contexts/MonitoringContextEF.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <marker date="1551606845371" expanded="false" signature="6:103" ph="..." />
+            <marker date="1551606845371" expanded="true" signature="134:916" ph="{...}" />
+            <marker date="1551606845371" expanded="true" signature="185:914" ph="{...}" />
+            <marker date="1551606845371" expanded="true" signature="301:359" ph="{...}" />
+            <marker date="1551606845371" expanded="true" signature="438:688" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Exceptions/DuplicateException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding>
+            <marker date="1551615547793" expanded="true" signature="46:318" ph="{...}" />
+            <marker date="1551615547793" expanded="true" signature="53:166" ph="///  ... " />
+            <marker date="1551615547793" expanded="true" signature="214:316" ph="{...}" />
+            <marker date="1551615547793" expanded="true" signature="298:310" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Exceptions/NotFoundException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
+          <folding>
+            <marker date="1551615547797" expanded="true" signature="46:300" ph="{...}" />
+            <marker date="1551615547797" expanded="true" signature="53:151" ph="///  ... " />
+            <marker date="1551615547797" expanded="true" signature="197:298" ph="{...}" />
+            <marker date="1551615547797" expanded="true" signature="280:292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Extensions/WaterMonitorExtension.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding>
+            <marker date="1551615822530" expanded="false" signature="6:201" ph="..." />
+            <marker date="1551615822530" expanded="true" signature="234:913" ph="{...}" />
+            <marker date="1551615822530" expanded="true" signature="282:911" ph="{...}" />
+            <marker date="1551615822530" expanded="true" signature="297:588" ph="///  ... " />
+            <marker date="1551615822530" expanded="true" signature="709:905" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Buildings/House.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <marker date="1551616208904" expanded="true" signature="37:145" ph="{...}" />
+            <marker date="1551616208904" expanded="true" signature="44:88" ph="///  ... " />
+            <marker date="1551616208904" expanded="true" signature="122:143" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Meters/Meter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="63" column="50" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+          <folding>
+            <marker date="1551616208916" expanded="false" signature="6:107" ph="..." />
+            <marker date="1551616208916" expanded="true" signature="143:1793" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="150:212" ph="///  ... " />
+            <marker date="1551616208916" expanded="true" signature="235:1791" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="315:505" ph="///  ... " />
+            <marker date="1551616208916" expanded="true" signature="527:862" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="577:852" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="622:691" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="712:838" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="880:1055" ph="///  ... " />
+            <marker date="1551616208916" expanded="true" signature="1083:1434" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="1136:1424" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="1182:1254" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="1275:1410" ph="{...}" />
+            <marker date="1551616208916" expanded="true" signature="1452:1539" ph="///  ... " />
+            <marker date="1551616208916" expanded="true" signature="1654:1741" ph="///  ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Buildings/Building.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <marker date="1551616208892" expanded="false" signature="6:65" ph="..." />
+            <marker date="1551616208892" expanded="true" signature="104:827" ph="{...}" />
+            <marker date="1551616208892" expanded="true" signature="111:210" ph="///  ... " />
+            <marker date="1551616208892" expanded="true" signature="236:825" ph="{...}" />
+            <marker date="1551616208892" expanded="true" signature="296:408" ph="///  ... " />
+            <marker date="1551616208892" expanded="true" signature="470:608" ph="///  ... " />
+            <marker date="1551616208892" expanded="true" signature="681:768" ph="///  ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Models/Meters/WaterMeter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding>
+            <marker date="1551616208920" expanded="true" signature="34:156" ph="{...}" />
+            <marker date="1551616208920" expanded="true" signature="41:97" ph="///  ... " />
+            <marker date="1551616208920" expanded="true" signature="133:154" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/IRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <marker date="1551616809425" expanded="false" signature="6:108" ph="..." />
+            <marker date="1551616809425" expanded="true" signature="143:689" ph="{...}" />
+            <marker date="1551616809425" expanded="true" signature="220:687" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/EFRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <marker date="1551617871073" expanded="false" signature="6:193" ph="..." />
+            <marker date="1551617871073" expanded="true" signature="231:4929" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="238:420" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="504:4927" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="618:715" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="734:852" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="914:996" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="1006:1196" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="1231:1287" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="1297:1503" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="1575:1729" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="1739:1879" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="1920:1970" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="1988:2133" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="2174:2295" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="2313:2396" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="2423:2479" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="2489:2628" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="2663:2786" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="2796:3040" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="3170:3257" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="3268:3606" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="3762:3936" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="3947:4172" ph="///  ... " />
+            <marker date="1551617871073" expanded="true" signature="4278:4497" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="4592:4803" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="4629:4763" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="4673:4749" ph="{...}" />
+            <marker date="1551617871073" expanded="true" signature="4835:4921" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/Repositories/EF/UnitOfWorkEF.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1041">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <marker date="1551614769477" expanded="false" signature="6:117" ph="..." />
+            <marker date="1551614769477" expanded="true" signature="155:1961" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="162:283" ph="/// Реализация патерна единицы работы для синхронизации контекстов бд в репозиториях ... " />
+            <marker date="1551614769477" expanded="true" signature="327:1959" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="657:709" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="759:882" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="942:1080" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="1136:1268" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="1310:1433" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="1469:1525" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="1620:1835" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="1657:1825" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="1702:1778" ph="{...}" />
+            <marker date="1551614769477" expanded="true" signature="1867:1953" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/WaterMonitor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2646">
+          <caret line="107" column="75" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
+          <folding>
+            <marker date="1551617871081" expanded="false" signature="6:291" ph="..." />
+            <marker date="1551617871081" expanded="true" signature="314:5357" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="357:5355" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="458:500" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="518:667" ph="/// Получить строение с максимальный потреблением воды ... " />
+            <marker date="1551617871081" expanded="true" signature="745:1301" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="1067:1265" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="1319:1526" ph="/// Получить все постройки включая свойства ... " />
+            <marker date="1551617871081" expanded="true" signature="1672:1771" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="1781:1945" ph="/// Получить строение ... " />
+            <marker date="1551617871081" expanded="true" signature="1989:2051" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="2061:2365" ph="/// Получить список строений отфильтрованных по условии и включающих свойства ... " />
+            <marker date="1551617871081" expanded="true" signature="2496:2612" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="2622:2793" ph="/// Получить данные о счетчике ... " />
+            <marker date="1551617871081" expanded="true" signature="2831:2890" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="2900:3032" ph="/// Добавить строение к мониторингу ... " />
+            <marker date="1551617871081" expanded="true" signature="3083:3392" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="3109:3213" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="3251:3374" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="3402:3581" ph="/// Зарегистрировать новый измерительный прибор в строении ... " />
+            <marker date="1551617871081" expanded="true" signature="3623:4922" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="3744:3841" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="3910:4655" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="4217:4327" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="4687:4743" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="4781:4910" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="5025:5231" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="5062:5191" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="5106:5177" ph="{...}" />
+            <marker date="1551617871081" expanded="true" signature="5263:5349" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Monitoring/IMonitor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <marker date="1551617871061" expanded="false" signature="6:175" ph="..." />
+            <marker date="1551617871061" expanded="true" signature="197:2111" ph="{...}" />
+            <marker date="1551617871061" expanded="true" signature="244:2109" ph="{...}" />
+            <marker date="1551617871061" expanded="true" signature="261:410" ph="/// Получить строение с максимальный потреблением ... " />
+            <marker date="1551617871061" expanded="true" signature="486:693" ph="///  ... " />
+            <marker date="1551617871061" expanded="true" signature="824:988" ph="/// Получить строение ... " />
+            <marker date="1551617871061" expanded="true" signature="1036:1340" ph="///  ... " />
+            <marker date="1551617871061" expanded="true" signature="1488:1659" ph="///  ... " />
+            <marker date="1551617871061" expanded="true" signature="1701:1833" ph="/// Добавить строение к мониторингу ... " />
+            <marker date="1551617871061" expanded="true" signature="1888:2067" ph="/// Зарегистрировать новый измерительный прибор в строение ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Parameters/Filter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <marker date="1551555423123" expanded="true" signature="32:528" ph="{...}" />
+            <marker date="1551555423123" expanded="true" signature="39:114" ph="/// Параметр фильтрации в GET запросах ... " />
+            <marker date="1551555423123" expanded="true" signature="138:526" ph="{...}" />
+            <marker date="1551555423123" expanded="true" signature="153:251" ph="/// Поле по которому фильтруется максимальный элемент ... " />
+            <marker date="1551555423123" expanded="true" signature="307:416" ph="/// Показывает что фильтр пустой ... " />
+            <marker date="1551555423123" expanded="true" signature="454:520" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+          <folding>
+            <marker date="1551604367480" expanded="false" signature="6:368" ph="..." />
+            <marker date="1551604367480" expanded="true" signature="391:2972" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="418:2970" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="477:540" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="763:1611" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="774:1017" ph="/* services.AddDbContext&lt;MonitoringContextEF&gt;( ... */" />
+            <marker date="1551604367480" expanded="true" signature="1799:2964" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="1846:1923" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="1940:2194" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="2364:2530" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="2563:2952" ph="{...}" />
+            <marker date="1551604367480" expanded="true" signature="2594:2740" ph="/* To learn more about options for serving an Angular SPA from ASP.NET Core, ... */" />
+            <marker date="1551604367480" expanded="true" signature="2837:2938" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/WaterMetersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+          <folding>
+            <marker date="1551617871105" expanded="false" signature="6:161" ph="..." />
+            <marker date="1551617871105" expanded="true" signature="196:1397" ph="{...}" />
+            <marker date="1551617871105" expanded="true" signature="282:1395" ph="{...}" />
+            <marker date="1551617871105" expanded="true" signature="379:431" ph="{...}" />
+            <marker date="1551617871105" expanded="true" signature="441:595" ph="///  ... " />
+            <marker date="1551617871105" expanded="true" signature="662:854" ph="{...}" />
+            <marker date="1551617871105" expanded="true" signature="750:812" ph="{...}" />
+            <marker date="1551617871105" expanded="true" signature="872:1041" ph="///  ... " />
+            <marker date="1551617871105" expanded="true" signature="1129:1389" ph="{...}" />
+            <marker date="1551617871105" expanded="true" signature="1175:1345" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Controllers/HousesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <marker date="1551617871097" expanded="false" signature="6:266" ph="..." />
+            <marker date="1551617871097" expanded="true" signature="301:2923" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="381:2921" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="490:542" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="560:730" ph="///  ... " />
+            <marker date="1551617871097" expanded="true" signature="816:1185" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="862:1131" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="914:1058" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="1195:1368" ph="/// Фильтрация домов по параметрам ... " />
+            <marker date="1551617871097" expanded="true" signature="1446:2095" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="1507:1891" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="1567:1877" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="1908:2029" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="2113:2269" ph="///  ... " />
+            <marker date="1551617871097" expanded="true" signature="2336:2531" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="2427:2489" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="2646:2906" ph="{...}" />
+            <marker date="1551617871097" expanded="true" signature="2692:2852" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HouseSystem/Middlewares/ErrorHandlingMiddleware.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding>
+            <marker date="1551617871089" expanded="true" signature="6:146" ph="..." />
+            <marker date="1551617871089" expanded="true" signature="181:1625" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="188:276" ph="///  ... " />
+            <marker date="1551617871089" expanded="true" signature="317:1623" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="432:482" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="537:756" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="563:628" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="661:746" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="848:1617" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="1122:1200" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="1219:1280" ph="{...}" />
+            <marker date="1551617871089" expanded="true" signature="1339:1433" ph="{...}" />
           </folding>
         </state>
       </provider>

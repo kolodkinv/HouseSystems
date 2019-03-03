@@ -17,6 +17,11 @@ namespace HouseSystem.Controllers
             _monitor = monitor;
         }
 
+        /// <summary>
+        /// Получение данных о водяном счетчике
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -29,6 +34,11 @@ namespace HouseSystem.Controllers
             return NotFound();
         }
         
+        /// <summary>
+        /// Регистрация нового счетчика
+        /// </summary>
+        /// <param name="waterMeter">Водяной счетчик</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Create([FromBody]WaterMeter waterMeter)
         {

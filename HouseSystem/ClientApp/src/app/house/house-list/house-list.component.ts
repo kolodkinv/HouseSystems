@@ -33,7 +33,7 @@ export class HouseListComponent implements OnInit {
 
   addWaterMeter(waterMeter: WaterMeter){
     let house = this.houses.find(h => h.id == waterMeter.buildingId);
-    house.waterMeters = [waterMeter];
+    house.waterMeter = waterMeter;
     this.editHouse = new House();
     this.getHouseWithMaxWater();
   }

@@ -15,6 +15,6 @@ namespace Monitoring.Models.Buildings
         
         // Набор водянных счетчиков
         // Возможно расширение водяных счетчиков до количества больше 1
-        public ICollection<WaterMeter> WaterMeters { get; set; }
+        public WaterMeter WaterMeter { get; set; }
     }
 }

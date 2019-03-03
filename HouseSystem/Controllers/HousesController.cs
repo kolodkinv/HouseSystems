@@ -25,7 +25,7 @@ namespace HouseSystem.Controllers
             {
                 if (filter.IsEmpty())
                 {
-                    return Ok(await _monitor.GetAllBuildingsAsync(b => b.WaterMeters));
+                    return Ok(await _monitor.GetAllBuildingsAsync(b => b.WaterMeter));
                     
                 }
                 return await FilterBuildingsAsync(filter);

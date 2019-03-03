@@ -31,5 +31,7 @@ namespace Monitoring.Models.Meters
         [JsonIgnore] 
         [IgnoreDataMember] 
         public Building Building { get; set; }
+        
+        public int BuildingId { get; set; }
     }
 }

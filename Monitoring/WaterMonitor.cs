@@ -13,7 +13,7 @@ namespace Monitoring
 {
     public class WaterMonitor : IMonitor
     {
-        private IUnitOfWork _db;
+        private readonly IUnitOfWork _db;
         
         public WaterMonitor(IUnitOfWork db)
         {
@@ -34,11 +34,9 @@ namespace Monitoring
             
             if (waterMeterMax != null)
             {
-                // Собираем информацию о строении в котором устновлен счетчик
-                var fullWaterMeterMax = _db.WaterMeters
-                    .GetWithInclude(m => m.Id == waterMeterMax.Id, wm => wm.Building)
+                return _db.Buildings
+                    .GetWithInclude(b => b.Id == waterMeterMax.BuildingId, w => w.WaterMeter)
                     .FirstOrDefault();
-                return fullWaterMeterMax?.Building;
             }
 
             return null;
@@ -72,32 +70,34 @@ namespace Monitoring
 
         public void AddMeter(Meter meter)
         {
-            var building = _db.Buildings
-                .GetWithInclude(b => b.Id == meter.Building.Id, wm => wm.WaterMeters)
-                .FirstOrDefault();
+            var building = _db.Buildings.Get(meter.Building.Id);
             
             if (building == null)
             {
                 throw new NotFoundException("Постройка не найдена");
             }
-            
-            if (meter is WaterMeter waterMeter)
+
+            // Определение типа счетчика
+            switch (meter)
             {
-                // Очистка счетчиков воды т.к в текущей реализации возможен один счетчик для воды
-                if (building.WaterMeters != null)
+                case WaterMeter waterMeter:
                 {
-                    foreach (var oldWaterMeter in building.WaterMeters)
+                    // Удаление старых водяных счетчиков в строении
+                    var oldWaterMeters = _db.WaterMeters.Find(w => w.BuildingId == building.Id);
+                    foreach (var oldWaterMeter in oldWaterMeters)
                     {
                         _db.WaterMeters.Delete(oldWaterMeter.Id);
-                    } 
+                    }
+                      
+                    // Устновка нового водяного счетчика
+                    building.WaterMeter = waterMeter;                           
+                    break;
                 }
-                
-                // Сохранение нового водяного счетчика
-                var item = _db.Buildings.Get(building.Id);
-                item.WaterMeters = new List<WaterMeter> {waterMeter};
-
-                _db.Save();
+                default:
+                    throw new ArgumentException("Неопределенный тип счетчика");                 
             }   
+            
+            _db.Save();
         }
     }
 }

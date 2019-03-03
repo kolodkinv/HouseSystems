@@ -70,7 +70,7 @@ namespace Monitoring
 
         public void AddMeter(Meter meter)
         {
-            var building = _db.Buildings.Get(meter.Building.Id);
+            var building = _db.Buildings.Get(meter.BuildingId);
             
             if (building == null)
             {

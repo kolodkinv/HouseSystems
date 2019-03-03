@@ -1,4 +1,3 @@
-using HouseSystem.Dto;
 using Monitoring;
 using Microsoft.AspNetCore.Mvc;
 using Monitoring.Models.Meters;
@@ -28,12 +27,12 @@ namespace HouseSystem.Controllers
         }
         
         [HttpPost]
-        public IActionResult Create([FromBody]WaterMeterDto waterMeter)
+        public IActionResult Create([FromBody]WaterMeter waterMeter)
         {
             if (ModelState.IsValid)
             {
-                _monitor.AddMeter((WaterMeter)waterMeter);
-                return CreatedAtAction(nameof(Get), new { id = waterMeter.Id }, (WaterMeter)waterMeter);
+                _monitor.AddMeter(waterMeter);
+                return CreatedAtAction(nameof(Get), new { id = waterMeter.Id }, waterMeter);
             }
 
             return BadRequest();

@@ -156,9 +156,6 @@
           <e p="HousesController.cs" t="Include" />
           <e p="WaterMetersController.cs" t="Include" />
         </e>
-        <e p="Dto" t="Include">
-          <e p="WaterMeterDto.cs" t="Include" />
-        </e>
         <e p="HouseSystem.csproj" t="IncludeRecursive" />
         <e p="Middlewares" t="Include">
           <e p="ErrorHandlingMiddleware.cs" t="Include" />

@@ -15,14 +15,6 @@
           <e p=".gitignore" t="Include" />
           <e p="README.md" t="Include" />
           <e p="angular.json" t="Include" />
-          <e p="e2e" t="Include">
-            <e p="protractor.conf.js" t="Include" />
-            <e p="src" t="Include">
-              <e p="app.e2e-spec.ts" t="Include" />
-              <e p="app.po.ts" t="Include" />
-            </e>
-            <e p="tsconfig.e2e.json" t="Include" />
-          </e>
           <e p="node_modules" t="ExcludeRecursive">
             <e p="@angular/animations" t="IncludeRecursive" />
             <e p="@angular/cli" t="IncludeRecursive" />

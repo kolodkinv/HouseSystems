@@ -13,18 +13,21 @@ export class HouseService {
     return Promise.reject(error);
   }
 
+  // Получение списка всех домов
   getHouses(){
     return this.httpClient.get(this.urlHouses)
       .toPromise()
       .catch(HouseService.responseError);
   }
 
+  // Получение дома с максимальным потреблением воды
   getHouseWithMaxWater(){
     return this.httpClient.get(this.urlHouses + "?max=water")
       .toPromise()
       .catch(HouseService.responseError)
   }
 
+  // Регистрация нового дома
   addHouse(house: House){
     return this.httpClient.post(this.urlHouses, house)
       .toPromise()

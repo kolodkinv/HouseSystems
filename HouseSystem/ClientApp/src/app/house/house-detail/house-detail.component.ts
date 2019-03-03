@@ -9,16 +9,18 @@ import {HouseService} from "../house.service";
 })
 
 export class HouseDetailComponent implements OnInit {
-  @Output() onAdd = new EventEmitter<House>();
-  newHouse: House = new House();
-  error: string;
-  success: boolean = false;
+
+  @Output() onAdd = new EventEmitter<House>();  // Событие что дом зарегистрирован
+  newHouse: House = new House();                // Регистрируемый дом
+  error: string;                                // Сообщение об ошибке
+  success: boolean = false;                     // Флаг успешности регистрации дома
 
   constructor(private houseService: HouseService) { }
 
   ngOnInit() {
   }
 
+  // Добавление нового дома
   addHouse(house: House){
     this.houseService.addHouse(house)
       .then(house => {
@@ -31,10 +33,12 @@ export class HouseDetailComponent implements OnInit {
       });
   }
 
+  // Сброс ошибки добавления
   resetError(){
     this.error = '';
   }
 
+  // Сброс сообщения об успешном добавлении
   resetSucces(){
     this.success = false;
   }

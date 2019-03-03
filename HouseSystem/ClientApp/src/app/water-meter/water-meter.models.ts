@@ -1,10 +1,11 @@
 import {House} from "../house/house.models";
 
+// Водяной счетчик
 export class WaterMeter {
-  id: number;
-  value: number;
-  building: House;
-  buildingId:number;
+  id: number;         // Заводской номер счетчика
+  value: number;      // Показания счетчика
+  building: House;    // Строение в котором установлен счетчик
+  buildingId:number;  // Id строения в котором установлен счетчик
 
   constructor(){
     this.id = 0;

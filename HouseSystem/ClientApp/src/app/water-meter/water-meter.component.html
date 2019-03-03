@@ -7,11 +7,11 @@
 <div class="row" *ngIf="!error">
   <div class="col">
     <label>Номер</label>
-    <input type="number" [(ngModel)]="waterMeter.id" class="form-control" />
+    <input type="number" [(ngModel)]="waterMeter.id" class="form-control" [min]="0"/>
   </div>
   <div class="col">
     <label>Показания</label>
-    <input type="number" [(ngModel)]="waterMeter.value" class="form-control" />
+    <input type="number" [(ngModel)]="waterMeter.value" class="form-control" [min]="0"/>
   </div>
   <div class="col">
     <button class="btn btn-outline-success btn-block" (click)="registerWaterMeter(waterMeter)">Зарегистрировать</button>

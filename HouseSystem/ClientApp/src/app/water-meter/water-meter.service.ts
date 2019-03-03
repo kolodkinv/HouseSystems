@@ -12,6 +12,7 @@ export class WaterMeterService {
     return Promise.reject(error);
   }
 
+  // Регистрация нового счетчика
   addWaterMeter(meter: WaterMeter){
     return this.httpClient.post(this.urlWaterMeters, meter)
       .toPromise()

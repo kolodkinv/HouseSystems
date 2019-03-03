@@ -11,10 +11,10 @@ import {WaterMeter} from "../../water-meter/water-meter.models";
 
 export class HouseListComponent implements OnInit {
 
-  houses: Array<House>;
-  editHouse: House = new House();
-  houseWithMaxWaterValue: House = new House();
-  error: string;
+  houses: Array<House>;                         // Список домов
+  editHouse: House = new House();               // Редактируемый дом
+  houseWithMaxWaterValue: House = new House();  // Дом с максимальным потреблением воды
+  error: string;                                // Ошибка
 
   constructor(private houseService: HouseService) { }
 
@@ -23,14 +23,17 @@ export class HouseListComponent implements OnInit {
     this.getHouseWithMaxWater();
   }
 
+  // Начало режима редактирования дома
   startEditHouse(house: House){
     this.editHouse = house;
   }
 
+  // Выход из режима редактирования дома
   cancelEdit(){
     this.editHouse = new House();
   }
 
+  // Регистрация водяного счетчика
   addWaterMeter(waterMeter: WaterMeter){
     let house = this.houses.find(h => h.id == waterMeter.buildingId);
     house.waterMeter = waterMeter;
@@ -38,21 +41,23 @@ export class HouseListComponent implements OnInit {
     this.getHouseWithMaxWater();
   }
 
+  // Регистрация дома
   addHouse(house: House){
     this.houses.push(house);
   }
 
+  // Получение списка домов
   getHouses(){
     this.houseService.getHouses()
       .then(houses => {
         this.houses = houses;
       })
       .catch(error => {
-        debugger;
         this.error = error;
       });
   }
 
+  // Получение дома с максимальным потреблением воды
   getHouseWithMaxWater(){
     this.houseService.getHouseWithMaxWater()
       .then(house => {

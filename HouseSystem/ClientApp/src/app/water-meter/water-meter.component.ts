@@ -12,7 +12,6 @@ export class WaterMeterComponent implements OnInit {
   @Output() onCancel = new EventEmitter();
   @Output() onCreate = new EventEmitter<WaterMeter>();
   waterMeter: WaterMeter = new WaterMeter();
-
   error: string;
 
   constructor(private waterMeterService: WaterMeterService) { }
@@ -27,11 +26,15 @@ export class WaterMeterComponent implements OnInit {
         this.onCreate.emit(waterMeter);
       })
       .catch(error => {
-        this.error = error;
+        this.error = error.error.error;
       });
   }
 
   cancel(){
     this.onCancel.emit();
+  }
+
+  resetError(){
+    this.error = '';
   }
 }

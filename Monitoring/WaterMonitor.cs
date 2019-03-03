@@ -72,7 +72,10 @@ namespace Monitoring
 
         public void AddMeter(Meter meter)
         {
-            var building = _db.Buildings.Get(meter.Building.Id);
+            var building = _db.Buildings
+                .GetWithInclude(b => b.Id == meter.Building.Id, wm => wm.WaterMeters)
+                .FirstOrDefault();
+            
             if (building == null)
             {
                 throw new NotFoundException("Постройка не найдена");
@@ -81,7 +84,18 @@ namespace Monitoring
             if (meter is WaterMeter waterMeter)
             {
                 // Очистка счетчиков воды т.к в текущей реализации возможен один счетчик для воды
-                building.WaterMeters = new List<WaterMeter> {waterMeter};
+                if (building.WaterMeters != null)
+                {
+                    foreach (var oldWaterMeter in building.WaterMeters)
+                    {
+                        _db.WaterMeters.Delete(oldWaterMeter.Id);
+                    } 
+                }
+                
+                // Сохранение нового водяного счетчика
+                var item = _db.Buildings.Get(building.Id);
+                item.WaterMeters = new List<WaterMeter> {waterMeter};
+
                 _db.Save();
             }   
         }

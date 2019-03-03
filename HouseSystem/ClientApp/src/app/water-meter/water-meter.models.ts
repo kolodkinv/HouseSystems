@@ -1,13 +1,13 @@
 import {House} from "../house/house.models";
 
 export class WaterMeter {
-  id: string;
+  id: number;
   value: number;
   building: House;
   buildingId:number;
 
   constructor(){
-    this.id = "";
+    this.id = 0;
     this.value = 0;
     this.building = new House();
   }

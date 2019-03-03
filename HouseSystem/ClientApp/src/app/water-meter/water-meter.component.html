@@ -1,7 +1,13 @@
-<div class="row">
+<div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="error">
+  {{error}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="resetError()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="row" *ngIf="!error">
   <div class="col">
     <label>Номер</label>
-    <input type="text" [(ngModel)]="waterMeter.id" class="form-control" />
+    <input type="number" [(ngModel)]="waterMeter.id" class="form-control" />
   </div>
   <div class="col">
     <label>Показания</label>

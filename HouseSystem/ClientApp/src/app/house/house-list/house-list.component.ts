@@ -14,7 +14,6 @@ export class HouseListComponent implements OnInit {
   houses: Array<House>;
   editHouse: House = new House();
   houseWithMaxWaterValue: House = new House();
-  idHouseMaxWater: number = -1;
   error: string;
 
   constructor(private houseService: HouseService) { }
@@ -49,6 +48,7 @@ export class HouseListComponent implements OnInit {
         this.houses = houses;
       })
       .catch(error => {
+        debugger;
         this.error = error;
       });
   }

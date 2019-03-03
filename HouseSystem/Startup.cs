@@ -1,4 +1,5 @@
 using HouseSystem.Contexts;
+using HouseSystem.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -52,6 +53,7 @@ namespace HouseSystem
                 app.UseHsts();
             }
 
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 

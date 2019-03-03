@@ -9,7 +9,7 @@ export class WaterMeterService {
   constructor(private httpClient: HttpClient) { }
 
   private static responseError(error: any): Promise<any> {
-    return Promise.reject(error.json());
+    return Promise.reject(error);
   }
 
   addWaterMeter(meter: WaterMeter){

@@ -1,9 +1,15 @@
 <div class="container">
   <h5 class="h5">Список домов</h5>
-  <div class="row">
+  <div *ngIf="!houses">Загрузка...</div>
+  <div class="alert alert-info" role="alert" *ngIf="houses && houses.length == 0">
+    <p>Список домов пуст.</p>
+    <hr>
+    <p class="mb-0">Добавьте новые дома ниже</p>
+  </div>
+  <div class="row" *ngIf="houses && houses.length > 0">
     <table class='table table-striped' *ngIf="houses">
-      <caption>
-        <div class="alert alert-warning">Дом с максимальным потреблением воды</div>
+      <caption *ngIf="houseWithMaxWaterValue">
+        <div class="alert alert-warning">* Дом с максимальным потреблением воды</div>
       </caption>
       <thead>
       <tr>
@@ -14,19 +20,25 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let house of houses" [ngClass]="{'table-warning':house.id == houseWithMaxWaterValue.id}">
+      <tr *ngFor="let house of houses" [ngClass]="{'table-warning': houseWithMaxWaterValue && house.id == houseWithMaxWaterValue.id}">
         <td>{{ house.id }}</td>
         <td>{{ house.address }}</td>
         <td *ngIf="house.waterMeters && house.waterMeters.length > 0"> {{house.waterMeters[0].value}}</td>
         <td *ngIf="!house.waterMeters || house.waterMeters.length == 0"> Нет данных </td>
         <td>
           <app-water-meter *ngIf="editHouse.id == house.id" [houseId]="editHouse.id" (onCancel)="cancelEdit()" (onCreate)="addWaterMeter($event)"></app-water-meter>
-          <button *ngIf="editHouse.id != house.id" class="btn btn-sm btn-primary" (click)="startEditHouse(house)">Зарегистрировать новый счетчик воды</button>
+          <button *ngIf="editHouse.id != house.id" class="btn btn-outline-primary" (click)="startEditHouse(house)">Зарегистрировать новый счетчик воды</button>
         </td>
       </tr>
       </tbody>
     </table>
   </div>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="error">
+    {{error}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
   <h5 class="h5">Добавление нового дома</h5>
-  <app-house-detail (onAdd)="addHouse($event)" ></app-house-detail>
+  <app-house-detail (onAdd)="addHouse($event)"></app-house-detail>
 </div>

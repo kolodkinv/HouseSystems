@@ -12,6 +12,7 @@ export class HouseDetailComponent implements OnInit {
   @Output() onAdd = new EventEmitter<House>();
   newHouse: House = new House();
   error: string;
+  success: boolean = false;
 
   constructor(private houseService: HouseService) { }
 
@@ -23,10 +24,18 @@ export class HouseDetailComponent implements OnInit {
       .then(house => {
         this.onAdd.emit(house);
         this.newHouse = new House();
+        this.success = true;
       })
       .catch(error => {
-        this.error = error;
+        this.error = error.error.error;
       });
   }
 
+  resetError(){
+    this.error = '';
+  }
+
+  resetSucces(){
+    this.success = false;
+  }
 }

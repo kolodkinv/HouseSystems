@@ -160,6 +160,9 @@
           <e p="WaterMeterDto.cs" t="Include" />
         </e>
         <e p="HouseSystem.csproj" t="IncludeRecursive" />
+        <e p="Middlewares" t="Include">
+          <e p="ErrorHandlingMiddleware.cs" t="Include" />
+        </e>
         <e p="Pages" t="Include">
           <e p="Error.cshtml" t="Include" />
           <e p="Error.cshtml.cs" t="Include" />

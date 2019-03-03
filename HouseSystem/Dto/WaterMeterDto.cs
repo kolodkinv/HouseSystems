@@ -8,7 +8,7 @@ namespace HouseSystem.Dto
     {
         private double _value;
         
-        public string Id { get; set; }
+        public int Id { get; set; }
         
         public double Value
         {

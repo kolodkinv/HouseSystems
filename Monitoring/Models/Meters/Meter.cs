@@ -10,7 +10,7 @@ namespace Monitoring.Models.Meters
     {
         private double _value;
         // Заводской номер прибора
-        public string Id { get; set; }
+        public int Id { get; set; }
         // Показания прибора
         public double Value
         {

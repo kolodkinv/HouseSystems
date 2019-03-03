@@ -19,6 +19,7 @@ export class HouseListComponent implements OnInit {
   constructor(private houseService: HouseService) { }
 
   ngOnInit() {
+    this.houseWithMaxWaterValue = new House();
     this.getHouses();
     this.getHouseWithMaxWater();
   }

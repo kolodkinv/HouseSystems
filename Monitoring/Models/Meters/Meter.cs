@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 using Monitoring.Models.Buildings;
 using Newtonsoft.Json;
@@ -17,6 +18,7 @@ namespace Monitoring.Models.Meters
         /// Заводской номер счетчика
         /// </summary>
         /// <exception cref="ArgumentException">Исключение при установке некорректного заводского номера</exception>
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id
         {
             get => _id;

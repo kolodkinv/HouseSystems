@@ -13,29 +13,29 @@ namespace HouseSystem
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private string _contentRootPath;
+
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            _contentRootPath = env.ContentRootPath;
         }
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-//            services.AddDbContext<MonitoringContextEF>(
-//                opt => opt.UseSqlServer("Server=localhost,1433;Database=Machine4;User Id=SA;Password=ZxcVda!@#123"));
-//            services.AddWaterMonitoring<MonitoringContextEF>();
-            
+        {    
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
-            services.AddDbContext<MonitoringContextEF>(options =>
-                options.UseMySql(
-                    "server=172.17.0.2;database=crypto;user=crypto;password=test;Charset=utf8;"
-                )
-            );
+            var connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=%CONTENTROOTPATH%\\App_Data\\HouseDB.mdf;Integrated Security=True;Connect Timeout=30";
+            if (connection.Contains("%CONTENTROOTPATH%"))
+            {
+                connection = connection.Replace("%CONTENTROOTPATH%", _contentRootPath);
+            }
+            services.AddDbContext<MonitoringContextEF>(opt => opt.UseSqlServer(connection));
             services.AddWaterMonitoring<MonitoringContextEF>();
         }
 

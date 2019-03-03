@@ -44,7 +44,6 @@ namespace HouseSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 _monitor.AddMeter(waterMeter); 
                 return CreatedAtAction(nameof(Get), new { id = waterMeter.Id }, waterMeter);
             }

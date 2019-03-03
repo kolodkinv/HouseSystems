@@ -9,8 +9,24 @@ namespace Monitoring.Models.Meters
     public class Meter
     {
         private double _value;
+
+        private int _id;
         // Заводской номер прибора
-        public int Id { get; set; }
+        public int Id
+        {
+            get => _id;
+            set
+            {
+                if (value > 0)
+                {
+                    _id = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Некорректный заводской номер счетчика");
+                }
+            }
+        }
         // Показания прибора
         public double Value
         {

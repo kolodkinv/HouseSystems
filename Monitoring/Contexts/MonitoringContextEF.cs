@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Monitoring.Models.Buildings;
 using Monitoring.Models.Meters;
 
-namespace HouseSystem.Contexts
+namespace Monitoring.Contexts
 {
     public class MonitoringContextEF : DbContext
     {
@@ -15,6 +15,10 @@ namespace HouseSystem.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Building>()
+                .HasIndex(u => u.Address)
+                .IsUnique();
+            
+            builder.Entity<House>()
                 .HasIndex(u => u.Address)
                 .IsUnique();
         }

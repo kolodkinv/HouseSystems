@@ -1,8 +1,11 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using HouseSystem.Parameters;
 using Monitoring;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Monitoring.Exceptions;
 using Monitoring.Models.Buildings;
 using Newtonsoft.Json;
 
@@ -77,7 +80,7 @@ namespace HouseSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                _monitor.AddBuilding(house);
+                _monitor.AddBuilding(house);          
                 return CreatedAtAction(nameof(Get), new { id = house.Id }, house);
             }
 

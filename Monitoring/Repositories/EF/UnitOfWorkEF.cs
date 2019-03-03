@@ -8,7 +8,7 @@ namespace Monitoring.Repositories.EF
     /// <summary>
     /// Реализация патерна единицы работы для синхронизации контекстов бд в репозиториях
     /// </summary>
-    public class UnitOfWorkEF : IDisposable, IUnitOfWork
+    public class UnitOfWorkEF : IUnitOfWork
     {
         private DbContext _context;
         private EFRepository<Meter> _meterRepository;

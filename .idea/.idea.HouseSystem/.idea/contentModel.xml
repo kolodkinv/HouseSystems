@@ -5,6 +5,9 @@
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$/../.Rider2018.3/system/extResources" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$/../.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_HouseSystem.-2083993823.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$/../.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$PROJECT_DIR$/../.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$PROJECT_DIR$/../.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="HouseSystem" t="IncludeRecursive">
         <e p="ClientApp" t="Include">
@@ -149,9 +152,6 @@
           <e p="tsconfig.json" t="Include" />
           <e p="tslint.json" t="Include" />
         </e>
-        <e p="Contexts" t="Include">
-          <e p="MonitoringContextEF.cs" t="Include" />
-        </e>
         <e p="Controllers" t="Include">
           <e p="HousesController.cs" t="Include" />
           <e p="WaterMetersController.cs" t="Include" />
@@ -189,7 +189,11 @@
       </e>
       <e p="HouseSystem.sln" t="IncludeFlat" />
       <e p="Monitoring" t="IncludeRecursive">
+        <e p="Contexts" t="Include">
+          <e p="MonitoringContextEF.cs" t="Include" />
+        </e>
         <e p="Exceptions" t="Include">
+          <e p="DuplicateException.cs" t="Include" />
           <e p="NotFoundException.cs" t="Include" />
         </e>
         <e p="Extensions" t="Include">
@@ -221,6 +225,19 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
               <e p="Monitoring.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Monitoring.Tests" t="IncludeRecursive">
+        <e p="Monitoring.Tests.csproj" t="IncludeRecursive" />
+        <e p="WaterMonitorTest.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="Monitoring.Tests.AssemblyInfo.cs" t="Include" />
+              <e p="Monitoring.Tests.Program.cs" t="Include" />
             </e>
           </e>
         </e>

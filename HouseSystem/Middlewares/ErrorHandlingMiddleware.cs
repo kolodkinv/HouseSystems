@@ -34,7 +34,8 @@ namespace HouseSystem.Middlewares
 
             if (exception is ApplicationException || 
                 exception is ArgumentException || 
-                exception is NotFoundException)
+                exception is NotFoundException ||
+                exception is DuplicateException)
             {
                 code = HttpStatusCode.BadRequest;
             } 

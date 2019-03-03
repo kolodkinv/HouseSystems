@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Monitoring.Exceptions;
 using Monitoring.Models.Buildings;
 using Monitoring.Models.Meters;
@@ -58,6 +59,11 @@ namespace Monitoring
             return _db.Buildings.Get(id);
         }
 
+        public Building GetBuilding(Func<Building, bool> predicate, params Expression<Func<Building, object>>[] includeProperties)
+        {
+            return _db.Buildings.GetWithInclude(predicate, includeProperties).FirstOrDefault();
+        }
+
         public Meter GetMeter(int id)
         {
             return _db.Meters.Get(id);
@@ -65,7 +71,14 @@ namespace Monitoring
 
         public void AddBuilding(Building building)
         {
-            _db.Buildings.Create(building);
+            try
+            {
+                _db.Buildings.Create(building);
+            }
+            catch (DbUpdateException)
+            {
+                throw new DuplicateException("Строение с таким адресом уже зарегистрировано");
+            }        
         }
 
         public void AddMeter(Meter meter)
@@ -88,16 +101,43 @@ namespace Monitoring
                     {
                         _db.WaterMeters.Delete(oldWaterMeter.Id);
                     }
-                      
+
                     // Устновка нового водяного счетчика
                     building.WaterMeter = waterMeter;                           
-                    break;
+                    break;        
                 }
                 default:
                     throw new ArgumentException("Неопределенный тип счетчика");                 
             }   
             
-            _db.Save();
+            try
+            {
+                _db.Save();
+            }
+            catch (DbUpdateException)
+            {
+                throw new DuplicateException("Водяной счетчик с таким номером уже зарегистрирован");
+            }  
+        }
+        
+        private bool _disposed = false;
+ 
+        public virtual void Dispose(bool disposing)
+        {
+            if(!_disposed)
+            {
+                if(disposing)
+                {
+                    _db.Dispose();
+                }
+            }
+            _disposed = true;
+        }
+ 
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

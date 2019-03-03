@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseSystem", "HouseSystem\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring", "Monitoring\Monitoring.csproj", "{E1918AAC-197F-43BF-A8BB-86222D6B29F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoring.Tests", "Monitoring.Tests\Monitoring.Tests.csproj", "{C8880506-3DAE-4F44-84B6-537A3FC00C60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{E1918AAC-197F-43BF-A8BB-86222D6B29F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1918AAC-197F-43BF-A8BB-86222D6B29F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1918AAC-197F-43BF-A8BB-86222D6B29F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8880506-3DAE-4F44-84B6-537A3FC00C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8880506-3DAE-4F44-84B6-537A3FC00C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8880506-3DAE-4F44-84B6-537A3FC00C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8880506-3DAE-4F44-84B6-537A3FC00C60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

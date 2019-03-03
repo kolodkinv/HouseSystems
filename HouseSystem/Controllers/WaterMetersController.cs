@@ -1,5 +1,8 @@
+using System;
 using Monitoring;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Monitoring.Exceptions;
 using Monitoring.Models.Meters;
 
 namespace HouseSystem.Controllers
@@ -31,7 +34,8 @@ namespace HouseSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                _monitor.AddMeter(waterMeter);
+
+                _monitor.AddMeter(waterMeter); 
                 return CreatedAtAction(nameof(Get), new { id = waterMeter.Id }, waterMeter);
             }
 

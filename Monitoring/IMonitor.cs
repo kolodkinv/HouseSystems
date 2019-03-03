@@ -7,7 +7,7 @@ using Monitoring.Models.Meters;
 
 namespace Monitoring
 {
-    public interface IMonitor
+    public interface IMonitor : IDisposable 
     {  
         /// <summary>
         /// Получить строение с максимальный потреблением
@@ -15,8 +15,8 @@ namespace Monitoring
         /// <returns></returns>
         Task<Building> GetBuildingWithMaxWaterConsumptionAsync();
 
-
         Task<IEnumerable<Building>> GetAllBuildingsAsync();
+        
         Task<IEnumerable<Building>> GetAllBuildingsAsync(params Expression<Func<Building, object>>[] includeProperties);
 
         /// <summary>
@@ -25,6 +25,8 @@ namespace Monitoring
         /// <param name="id"></param>
         /// <returns></returns>
         Building GetBuilding(int id);
+
+        Building GetBuilding(Func<Building, bool> predicate, params Expression<Func<Building, object>>[] includeProperties);
 
         Meter GetMeter(int id);
 
